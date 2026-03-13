@@ -1,4 +1,3 @@
-
 // =============================================
 // Responsive Navigation (Hamburger)
 // =============================================
@@ -40,9 +39,9 @@ const courses = [
         title: 'Introduction to Programming',
         credits: 2,
         certificate: 'Web and Computer Programming',
-        description: 'This course will introduce students to programming. It will introduce the building blocks of programming languages (variables, decisions, calculations, loops, array, and input/output) and use them to solve problems.',
+        description: 'This course will introduce students to programming.',
         technology: ['Python'],
-        completed: true
+        completed: true   // ✓ sin color (gris)
     },
     {
         subject: 'WDD',
@@ -50,9 +49,9 @@ const courses = [
         title: 'Web Fundamentals',
         credits: 2,
         certificate: 'Web and Computer Programming',
-        description: 'This course introduces students to the World Wide Web and to careers in Web design and development. The course is hands on with students actually participating in simple web creation.',
+        description: 'This course introduces students to the World Wide Web.',
         technology: ['HTML', 'CSS'],
-        completed: true
+        completed: true   // ✓ sin color (gris)
     },
     {
         subject: 'CSE',
@@ -60,9 +59,9 @@ const courses = [
         title: 'Programming with Functions',
         credits: 2,
         certificate: 'Web and Computer Programming',
-        description: 'This course will teach students to write programs with functions. Students will also learn testing, error handling, and other good practices.',
+        description: 'This course will teach students to write programs with functions.',
         technology: ['Python'],
-        completed: true
+        completed: false  // con color (azul oscuro)
     },
     {
         subject: 'CSE',
@@ -70,9 +69,9 @@ const courses = [
         title: 'Programming with Classes',
         credits: 2,
         certificate: 'Web and Computer Programming',
-        description: 'This course will introduce the principles of Object Oriented Programming. Students will learn to write programs with classes, including encapsulation, inheritance, and polymorphism.',
+        description: 'This course will introduce the principles of Object Oriented Programming.',
         technology: ['C#'],
-        completed: false
+        completed: false  // con color (azul oscuro)
     },
     {
         subject: 'WDD',
@@ -80,9 +79,9 @@ const courses = [
         title: 'Dynamic Web Fundamentals',
         credits: 2,
         certificate: 'Web and Computer Programming',
-        description: 'This course builds on prior experience in Web Fundamentals and programming. Students will learn to create dynamic websites which are automatically updated based on existing content and user input.',
+        description: 'This course builds on prior experience in Web Fundamentals and programming.',
         technology: ['HTML', 'CSS', 'JavaScript'],
-        completed: true
+        completed: true   // ✓ sin color (gris)
     },
     {
         subject: 'WDD',
@@ -90,9 +89,9 @@ const courses = [
         title: 'Frontend Web Development I',
         credits: 2,
         certificate: 'Web and Computer Programming',
-        description: 'This course builds on prior experience with Dynamic Web Fundamentals and programming. Students will focus on user experience, accessibility, compliance, performance optimization, and basic API usage.',
+        description: 'This course builds on prior experience with Dynamic Web Fundamentals and programming.',
         technology: ['HTML', 'CSS', 'JavaScript'],
-        completed: false
+        completed: false  // con color (azul oscuro)
     }
 ];
 
@@ -119,8 +118,14 @@ function renderCourses(filter = 'all') {
     filtered.forEach(course => {
         const card = document.createElement('div');
         card.classList.add('course-card', course.completed ? 'completed' : 'incomplete');
-        card.textContent = `${course.subject} ${course.number}`;
-        card.title = `${course.title} — ${course.credits} credits${course.completed ? ' ✓ Completed' : ''}`;
+
+        // Show checkmark for completed, label for incomplete
+        const label = course.completed
+            ? `✓ ${course.subject} ${course.number}`
+            : `${course.subject} ${course.number}`;
+
+        card.textContent = label;
+        card.title = `${course.title} — ${course.credits} credits`;
         coursesGrid.appendChild(card);
     });
 
