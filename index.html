@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Personal portfolio of Ulises Tzaj – BYU-Idaho student and IT professional from Sololá, Guatemala." />
+    <meta name="author" content="Ulises Tzaj" />
+    <title>Ulises Tzaj | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Roboto&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/home.css" />
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-inner">
+            <div class="logo-area">
+                <img src="images/home.svg" alt="Site logo" class="site-logo" />
+                <span class="site-name">Ulises Tzaj</span>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- NAV -->
+    <nav id="main-nav">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="chamber.html">Chamber Project</a></li>
+            <li><a href="final.html">Final Project</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+        <h1>Home</h1>
+
+        <div class="main-grid">
+
+            <!-- About Me Section -->
+            <section class="about-section card">
+                <h2>About Me</h2>
+                <p>My name is Ulises, and I was born in Sololá, Guatemala. I am currently a student at BYU-Idaho Online,
+                    and I also work in the IT department of a telephone company. I love going to the gym, playing video
+                    games, and spending time with my family and friends.</p>
+            </section>
+
+            <!-- Student Photo Section -->
+            <section class="photo-section card">
+                <h2>Student Photo</h2>
+                <img src="images/ulises.jpg" alt="Ulises Tzaj – Student Photo" class="student-photo" />
+            </section>
+
+        </div>
+
+        <!-- Web Certificate Courses Section -->
+        <section class="courses-section card">
+            <h2>Web Certificate Courses</h2>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="CSE">CSE</button>
+                <button class="filter-btn" data-filter="WDD">WDD</button>
+            </div>
+
+            <div class="courses-grid" id="courses-grid"></div>
+
+            <p class="credits-total">The total credits for courses listed above is <strong><span
+                        id="total-credits">0</span></strong></p>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <!-- Social Links -->
+        <div class="social-links">
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <img src="images/linkedin.svg" alt="LinkedIn" />
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <img src="images/github.svg" alt="GitHub" />
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                <img src="images/x.svg" alt="X" />
+            </a>
+        </div>
+
+        <!-- Copyright -->
+        <p class="footer-copy">
+            &copy; <span id="currentyear"></span> &bull; Ulises Tzaj &bull; Sololá, Guatemala
+        </p>
+
+        <!-- Last Modified -->
+        <p id="lastModified" class="last-modified"></p>
+    </footer>
+
+</body>
+
+</html>
