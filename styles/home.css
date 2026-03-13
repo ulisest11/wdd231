@@ -251,15 +251,17 @@ main h1 {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    max-width: 300px;
 }
+
 .student-photo {
-    width: 100%;
+    width: 40%;
     height: 240px !important;
     max-height: 240px !important;
     object-fit: cover;
     object-position: top center;
     display: block;
+    margin: 1rem auto;
+    border-radius: 8px;
 }
 
 /* =============================================
