@@ -302,8 +302,8 @@ main h1 {
 
 /* Courses Grid */
 .courses-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.7rem;
     padding: 0.75rem 1.2rem;
 }
@@ -313,15 +313,14 @@ main h1 {
     font-size: 0.85rem;
     font-weight: 600;
     letter-spacing: 0.04em;
-    padding: 0.6rem 1.1rem;
+    padding: 0.7rem 1rem;
     border-radius: 6px;
     border: 2px solid transparent;
     cursor: default;
     transition: transform var(--transition);
-    min-width: 110px;
     text-align: center;
+    width: 100%;
 }
-
 .course-card:hover {
     transform: translateY(-2px);
 }
