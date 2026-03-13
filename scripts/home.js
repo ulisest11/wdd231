@@ -1,3 +1,4 @@
+
 // =============================================
 // Responsive Navigation (Hamburger)
 // =============================================
@@ -11,19 +12,22 @@ hamburger.addEventListener('click', () => {
 });
 
 // =============================================
-// Footer: Current Year
+// Footer: Current Year (dynamic)
 // =============================================
-const yearSpan = document.getElementById('currentyear');
-if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
+const currentYear = new Date().getFullYear();
+
+const copyrightPara = document.querySelector("footer p");
+
+if (copyrightPara) {
+    copyrightPara.innerHTML = `©${currentYear} 🌵 Ulises Antonio Tzaj 🌵 Guatemala`;
 }
 
-// =============================================
-// Footer: Last Modified
-// =============================================
-const lastModifiedEl = document.getElementById('lastModified');
-if (lastModifiedEl) {
-    lastModifiedEl.textContent = `Last Modification: ${document.lastModified}`;
+const lastModified = document.lastModified;
+
+const lastUpdatedSpan = document.getElementById("last-updated");
+
+if (lastUpdatedSpan) {
+    lastUpdatedSpan.textContent = lastModified;
 }
 
 // =============================================
