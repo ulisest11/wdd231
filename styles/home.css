@@ -251,9 +251,8 @@ main h1 {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    max-width: 400px;
+    max-width: 300px;
 }
-
 .student-photo {
     width: 100%;
     height: 240px !important;
