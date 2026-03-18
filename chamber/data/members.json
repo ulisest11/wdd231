@@ -6,7 +6,7 @@
     "address": "Calle Santander 5-12, Zona 1, Panajachel",
     "phone": "(502) 7762-1234",
     "website": "https://dolcegelato.com.gt",
-    "image": "dolce.jpg",
+    "image": "dolce-example.jpg",
     "email": "info@dolcegelato.com.gt",
     "membershipLevel": 3,
     "description": "Artisan gelato crafted with local fruits and traditional Italian methods."
@@ -18,7 +18,7 @@
     "address": "Km 148 Ruta a San Lucas Tolimán, Panajachel",
     "phone": "(502) 7762-5678",
     "website": "https://hotelatitlan.com",
-    "image": "hotel-atitlan.jpg",
+    "image": "hotel-atitlan-example.jpg",
     "email": "reservas@hotelatitlan.com",
     "membershipLevel": 3,
     "description": "Luxury lakeside hotel with stunning views of Lake Atitlán and surrounding volcanoes."
@@ -30,7 +30,7 @@
     "address": "Avenida Los Árboles 2-30, Zona 2, Panajachel",
     "phone": "(502) 7762-9012",
     "website": "https://panarock.com.gt",
-    "image": "pana-rock.jpg",
+    "image": "pana-rock-example.jpg",
     "email": "hola@panarock.com.gt",
     "membershipLevel": 2,
     "description": "Live music venue and café celebrating local artists and Guatemala's rich culture."
