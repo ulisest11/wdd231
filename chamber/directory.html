@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Member directory of the Panajachel, Sololá Chamber of Commerce. Find local businesses, services, and opportunities in the heart of Lake Atitlán." />
+  <meta name="description" content="Panajachel, Sololá Chamber of Commerce — resource hub for local businesses, events, networking, and economic growth beside Lake Atitlán." />
   <meta name="author" content="Ulises Tzaj" />
-  <title>Member Directory | Panajachel Chamber of Commerce</title>
+  <title>Home | Panajachel Chamber of Commerce</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="images/atitlan.svg" />
 
   <!-- Facebook Open Graph -->
-  <meta property="og:title" content="Member Directory | Panajachel Chamber of Commerce" />
-  <meta property="og:description" content="Explore local businesses in Panajachel, Sololá. Join the Chamber of Commerce and grow your company alongside Lake Atitlán." />
+  <meta property="og:title" content="Panajachel Chamber of Commerce" />
+  <meta property="og:description" content="Your resource hub for local businesses, events, and networking beside Lake Atitlán, Guatemala." />
   <meta property="og:image" content="images/hero-atitlan.jpg" />
-  <meta property="og:url" content="https://panacc.org/directory.html" />
+  <meta property="og:url" content="https://panacc.org/index.html" />
   <meta property="og:type" content="website" />
 
   <!-- CSS -->
@@ -49,9 +49,9 @@
 
       <nav class="main-nav" id="mainNav" aria-label="Main navigation">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
           <li><a href="discover.html">Discover</a></li>
-          <li><a href="directory.html" class="active" aria-current="page">Business Directory</a></li>
+          <li><a href="directory.html">Business Directory</a></li>
           <li><a href="join.html">Join</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="podcast.html">Podcast</a></li>
@@ -62,44 +62,88 @@
     </div>
   </header>
 
-  <!-- MAIN -->
-  <main class="directory-main">
-
-    <div class="directory-header">
-      <h1>Member Directory</h1>
-      <p class="directory-subtitle">Discover the businesses that make Panajachel great</p>
-
-      <div class="view-toggle" role="group" aria-label="Toggle display view">
-        <button class="toggle-btn active" id="gridBtn" aria-pressed="true" title="Grid view">
-          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor">
-            <rect x="3" y="3" width="8" height="8" rx="1"/>
-            <rect x="13" y="3" width="8" height="8" rx="1"/>
-            <rect x="3" y="13" width="8" height="8" rx="1"/>
-            <rect x="13" y="13" width="8" height="8" rx="1"/>
-          </svg>
-          Grid
-        </button>
-        <button class="toggle-btn" id="listBtn" aria-pressed="false" title="List view">
-          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor">
-            <line x1="3" y1="6" x2="21" y2="6" stroke-width="2" stroke-linecap="round"/>
-            <line x1="3" y1="12" x2="21" y2="12" stroke-width="2" stroke-linecap="round"/>
-            <line x1="3" y1="18" x2="21" y2="18" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-          List
-        </button>
+  <!-- HERO -->
+  <section class="hero" aria-label="Welcome banner">
+    <img
+      src="images/hero-atitlan.jpg"
+      alt="Lake Atitlán with volcanoes at sunrise"
+      class="hero-img"
+      loading="eager"
+    />
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1 class="hero-title">Panajachel<br>Chamber of Commerce</h1>
+        <p class="hero-subtitle">Supporting local business beside Lake Atitlán</p>
+        <a href="events.html" class="hero-btn">Keynote Tickets</a>
       </div>
     </div>
+  </section>
 
-    <section class="members-container grid-view" id="membersContainer" aria-label="Chamber members">
-      <div class="loading-message" role="status" aria-live="polite">
-        <div class="spinner"></div>
-        <p>Loading directory...</p>
+  <!-- MAIN -->
+  <main class="home-main">
+    <h2 class="section-label">Home</h2>
+
+    <!-- INFO GRID: Events | Current Weather | Weather Forecast -->
+    <div class="info-grid">
+
+      <!-- EVENTS -->
+      <div class="info-card events-card">
+        <h3 class="card-header">Events</h3>
+        <div class="events-list" id="eventsList">
+          <article class="event-item">
+            <p class="event-date">April 12, 2026</p>
+            <p class="event-title">Annual Business Networking Luncheon</p>
+            <p class="event-location">Hotel Atitlán, Panajachel</p>
+          </article>
+          <article class="event-item">
+            <p class="event-date">April 28, 2026</p>
+            <p class="event-title">Small Business Workshop: Digital Marketing</p>
+            <p class="event-location">Municipal Center, Sala A</p>
+          </article>
+          <article class="event-item">
+            <p class="event-date">May 5, 2026</p>
+            <p class="event-title">Lake Atitlán Tourism Expo</p>
+            <p class="event-location">Calle Santander, Panajachel</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- CURRENT WEATHER -->
+      <div class="info-card weather-card">
+        <h3 class="card-header">Current Weather</h3>
+        <div class="weather-content">
+          <img src="images/weather.svg" alt="Weather icon" class="weather-icon" width="60" height="60" />
+          <div class="weather-details">
+            <p><strong>Temperature:</strong> <span id="temperature">--</span> °C</p>
+            <p><strong>Conditions:</strong> <span id="conditions">--</span></p>
+            <p><strong>Humidity:</strong> <span id="humidity">--</span>%</p>
+            <p><strong>Wind:</strong> <span id="windSpeed">--</span> km/h</p>
+            <p><strong>Wind Chill:</strong> <span id="windChill">--</span></p>
+          </div>
+        </div>
+        <p class="weather-location">📍 Panajachel, Sololá</p>
+      </div>
+
+      <!-- WEATHER FORECAST -->
+      <div class="info-card forecast-card">
+        <h3 class="card-header">Weather Forecast</h3>
+        <ul class="forecast-list" id="forecastList">
+          <li><span class="forecast-day">Loading...</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- FEATURED BUSINESSES -->
+    <section class="businesses-section" aria-label="Featured member businesses">
+      <div class="businesses-grid" id="featuredBusinesses">
+        <!-- Injected by JS -->
       </div>
     </section>
 
   </main>
 
-  <!-- FOOTER: left=contact | center=social | right=dev info -->
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-inner">
 
