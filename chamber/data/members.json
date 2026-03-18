@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Dolce Gelato",
+    "tagline": "Sabores Auténticos del Lago",
+    "address": "Calle Santander 5-12, Zona 1, Panajachel",
+    "phone": "(502) 7762-1234",
+    "website": "https://dolcegelato.com.gt",
+    "image": "dolce.jpg",
+    "email": "info@dolcegelato.com.gt",
+    "membershipLevel": 3,
+    "description": "Artisan gelato crafted with local fruits and traditional Italian methods."
+  },
+  {
+    "id": 2,
+    "name": "Hotel Atitlán",
+    "tagline": "Descanso con Vista al Volcán",
+    "address": "Km 148 Ruta a San Lucas Tolimán, Panajachel",
+    "phone": "(502) 7762-5678",
+    "website": "https://hotelatitlan.com",
+    "image": "hotel-atitlan.jpg",
+    "email": "reservas@hotelatitlan.com",
+    "membershipLevel": 3,
+    "description": "Luxury lakeside hotel with stunning views of Lake Atitlán and surrounding volcanoes."
+  },
+  {
+    "id": 3,
+    "name": "Pana Rock Café",
+    "tagline": "Música, Arte y Buen Café",
+    "address": "Avenida Los Árboles 2-30, Zona 2, Panajachel",
+    "phone": "(502) 7762-9012",
+    "website": "https://panarock.com.gt",
+    "image": "pana-rock.jpg",
+    "email": "hola@panarock.com.gt",
+    "membershipLevel": 2,
+    "description": "Live music venue and café celebrating local artists and Guatemala's rich culture."
+  },
+  {
+    "id": 4,
+    "name": "Mercado Tzutujil",
+    "tagline": "Artesanías y Textiles Mayas",
+    "address": "Calle Principal 8-45, Zona 1, Panajachel",
+    "phone": "(502) 7762-3456",
+    "website": "https://mercadotzutujil.com",
+    "image": "mercado.jpg",
+    "email": "ventas@mercadotzutujil.com",
+    "membershipLevel": 2,
+    "description": "Authentic Mayan textiles, handicrafts, and local art from indigenous communities around the lake."
+  },
+  {
+    "id": 5,
+    "name": "Servicios Financieros Lago",
+    "tagline": "Tu Futuro Financiero en el Lago",
+    "address": "Edificio Central, Local 3, Calle del Lago, Panajachel",
+    "phone": "(502) 7762-7890",
+    "website": "https://finanzaslago.com.gt",
+    "email": "contacto@finanzaslago.com.gt",
+    "image": "finanzas.jpg",
+    "membershipLevel": 1,
+    "description": "Financial consulting, loans, and investment services for local businesses and individuals."
+  },
+  {
+    "id": 6,
+    "name": "Eco Tours Atitlán",
+    "tagline": "Aventura y Naturaleza Sin Límites",
+    "address": "Playa Pública s/n, Zona 3, Panajachel",
+    "phone": "(502) 7762-2345",
+    "website": "https://ecotoursatitlan.com",
+    "email": "tours@ecotoursatitlan.com",
+    "image": "ecotours.jpg",
+    "membershipLevel": 3,
+    "description": "Kayaking, hiking, and cultural tours across the 12 villages surrounding Lake Atitlán."
+  },
+  {
+    "id": 7,
+    "name": "Clínica Del Lago",
+    "tagline": "Salud y Bienestar para tu Comunidad",
+    "address": "Barrio Jucanyá 4-10, Zona 2, Panajachel",
+    "phone": "(502) 7762-6789",
+    "website": "https://clinicadellago.com.gt",
+    "email": "salud@clinicadellago.com.gt",
+    "image": "clinica.jpg",
+    "membershipLevel": 2,
+    "description": "General medicine, dental care, and holistic wellness services for the Panajachel community."
+  },
+  {
+    "id": 8,
+    "name": "Inmobiliaria Atitlán",
+    "tagline": "Tu Hogar Frente al Lago",
+    "address": "Calle 14 de Febrero 6-22, Zona 1, Panajachel",
+    "phone": "(502) 7762-4567",
+    "website": "https://inmobiliariaatitlan.com",
+    "email": "propiedades@inmobiliariaatitlan.com",
+    "image": "inmobiliaria.jpg",
+    "membershipLevel": 1,
+    "description": "Real estate sales and rentals across Panajachel and surrounding lakeside communities."
+  }
+]

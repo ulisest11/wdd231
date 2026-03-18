@@ -1,0 +1,61 @@
+/* ===================================================
+   PANAJACHEL CHAMBER — directory-large.css
+   Loaded for screens >= 768px
+   =================================================== */
+
+/* === HEADER === */
+.nav-toggle {
+    display: none;
+}
+
+.main-nav {
+    display: block !important;
+    position: static;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+}
+
+.main-nav ul {
+    flex-direction: row;
+    gap: 0.25rem;
+    align-items: center;
+}
+
+.main-nav a {
+    font-size: 0.88rem;
+    padding: 0.4rem 0.75rem;
+    white-space: nowrap;
+}
+
+/* === DIRECTORY HEADER === */
+.directory-header h1 {
+    font-size: 2.6rem;
+}
+
+/* === GRID — 2 columns on tablet === */
+.members-container.grid-view {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+/* === LIST — show address === */
+.list-item-address {
+    display: block;
+    flex: 2;
+}
+
+.member-list-item {
+    gap: 1rem;
+}
+
+/* === 3 columns on desktop === */
+@media (min-width: 1024px) {
+    .members-container.grid-view {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .directory-header h1 {
+        font-size: 3rem;
+    }
+}
