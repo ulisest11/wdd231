@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    
+        <!-- Fondo -->
+        <rect width="200" height="200" fill="#B3E5FC" />
+    
+        <!-- Sol -->
+        <circle cx="60" cy="60" r="18" fill="#FFD54F">
+            <animate attributeName="r" values="18;22;18" dur="3s" repeatCount="indefinite" />
+        </circle>
+    
+        <!-- Nube -->
+        <g>
+            <ellipse cx="110" cy="80" rx="35" ry="20" fill="#FFFFFF" />
+            <ellipse cx="85" cy="85" rx="25" ry="15" fill="#FFFFFF" />
+            <ellipse cx="135" cy="85" rx="25" ry="15" fill="#FFFFFF" />
+    
+            <!-- Animación suave de movimiento -->
+            <animateTransform attributeName="transform" type="translate" values="0 0; 5 0; 0 0" dur="6s"
+                repeatCount="indefinite" />
+        </g>
+    
+        <!-- Lluvia -->
+        <g stroke="#2196F3" stroke-width="2">
+            <line x1="90" y1="105" x2="90" y2="120">
+                <animate attributeName="y1" values="105;115;105" dur="1s" repeatCount="indefinite" />
+                <animate attributeName="y2" values="120;130;120" dur="1s" repeatCount="indefinite" />
+            </line>
+    
+            <line x1="110" y1="105" x2="110" y2="120">
+                <animate attributeName="y1" values="105;115;105" dur="1.2s" repeatCount="indefinite" />
+                <animate attributeName="y2" values="120;130;120" dur="1.2s" repeatCount="indefinite" />
+            </line>
+    
+            <line x1="130" y1="105" x2="130" y2="120">
+                <animate attributeName="y1" values="105;115;105" dur="0.9s" repeatCount="indefinite" />
+                <animate attributeName="y2" values="120;130;120" dur="0.9s" repeatCount="indefinite" />
+            </line>
+        </g>
+    
+    </svg>
+    
+</head>
+<body>
+    
+</body>
+</html>
