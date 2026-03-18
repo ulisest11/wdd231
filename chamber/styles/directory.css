@@ -360,7 +360,7 @@ h3 {
 }
 
 .member-card .card-img-wrap {
-    height: 160px;
+    height: 120px;
     overflow: hidden;
     background: var(--border);
     position: relative;

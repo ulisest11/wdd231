@@ -3,21 +3,21 @@
    Loaded for screens >= 768px
    =================================================== */
 
-/* === HEADER === */
+/* === HEADER: hide hamburger, show full nav === */
 .nav-toggle {
-    display: none;
+    display: none !important;
 }
 
 .main-nav {
     display: block !important;
-    position: static;
-    background: transparent;
-    padding: 0;
-    box-shadow: none;
+    position: static !important;
+    background: transparent !important;
+    padding: 0 !important;
+    box-shadow: none !important;
 }
 
 .main-nav ul {
-    flex-direction: row;
+    flex-direction: row !important;
     gap: 0.25rem;
     align-items: center;
 }
@@ -33,13 +33,14 @@
     font-size: 2.6rem;
 }
 
-/* === GRID — 2 columns on tablet === */
+/* === GRID: 2 columns on tablet === */
 .members-container.grid-view {
+    display: grid !important;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
 
-/* === LIST — show address === */
+/* === LIST: show address column === */
 .list-item-address {
     display: block;
     flex: 2;
@@ -49,7 +50,7 @@
     gap: 1rem;
 }
 
-/* === 3 columns on desktop === */
+/* === DESKTOP: 3 columns === */
 @media (min-width: 1024px) {
     .members-container.grid-view {
         grid-template-columns: repeat(3, 1fr);
@@ -58,4 +59,4 @@
     .directory-header h1 {
         font-size: 3rem;
     }
-}
+}            
