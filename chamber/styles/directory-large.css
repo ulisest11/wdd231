@@ -62,7 +62,9 @@
 }
 
 /* === HERO: taller on desktop === */
-.hero { height: 420px; }
+.hero {
+    height: 420px;
+}
 
 /* === INFO GRID: Events(wide) | Weather | Forecast === */
 .info-grid {
@@ -73,4 +75,20 @@
 /* === FEATURED BUSINESSES: 3 columns === */
 .featured-businesses {
     grid-template-columns: repeat(3, 1fr);
+}
+
+/* === EQUAL HEIGHT CARDS === */
+.info-grid {
+    align-items: stretch !important;
+}
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.events-list,
+.forecast-list {
+    flex: 1;
 }
