@@ -20,7 +20,7 @@
   <meta property="og:url" content="https://ulisest11.github.io/wdd231/chamber/directory.html" />
   <meta property="og:type" content="website" />
 
-  <!-- CSS: normalize first, then mobile base, then large screen -->
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/directory.css" />
   <link rel="stylesheet" href="styles/directory-large.css" media="(min-width: 768px)" />
@@ -38,7 +38,6 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner">
-
       <div class="logo-area">
         <img src="images/atitlan.svg" alt="Panajachel Chamber of Commerce logo" class="logo-img" width="50"
           height="50" />
@@ -65,13 +64,81 @@
           <li><a href="events.html">Events</a></li>
         </ul>
       </nav>
-
     </div>
   </header>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Welcome banner">
+    <img src="images/hero-atitlan.jpg" alt="Lake Atitlán with volcanoes at sunrise" class="hero-img" loading="eager" />
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <a href="events.html" class="hero-btn">Keynote Tickets</a>
+      </div>
+    </div>
+  </section>
 
   <!-- MAIN -->
   <main class="directory-main">
 
+    <h2 class="home-label">Home</h2>
+
+    <!-- INFO GRID: Events | Current Weather | Weather Forecast -->
+    <div class="info-grid">
+
+      <!-- EVENTS -->
+      <div class="info-card events-card">
+        <h3 class="card-header">Events</h3>
+        <div class="events-list">
+          <article class="event-item">
+            <p class="event-date">April 12, 2026</p>
+            <p class="event-title">Annual Business Networking Luncheon</p>
+            <p class="event-location">Hotel Atitlán, Panajachel</p>
+          </article>
+          <article class="event-item">
+            <p class="event-date">April 28, 2026</p>
+            <p class="event-title">Small Business Workshop: Digital Marketing</p>
+            <p class="event-location">Municipal Center, Sala A</p>
+          </article>
+          <article class="event-item">
+            <p class="event-date">May 5, 2026</p>
+            <p class="event-title">Lake Atitlán Tourism Expo</p>
+            <p class="event-location">Calle Santander, Panajachel</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- CURRENT WEATHER -->
+      <div class="info-card weather-card">
+        <h3 class="card-header">Current Weather</h3>
+        <div class="weather-content">
+          <img src="images/weather.svg" alt="Weather icon" class="weather-icon" width="56" height="56" />
+          <div class="weather-details">
+            <p><strong>Temperature:</strong> <span id="temperature">--</span> °C</p>
+            <p><strong>Conditions:</strong> <span id="conditions">--</span></p>
+            <p><strong>Humidity:</strong> <span id="humidity">--</span>%</p>
+            <p><strong>Wind:</strong> <span id="windSpeed">--</span> km/h</p>
+            <p><strong>Wind Chill:</strong> <span id="windChill">--</span></p>
+          </div>
+        </div>
+        <p class="weather-location">Panajachel, Sololá</p>
+      </div>
+
+      <!-- WEATHER FORECAST -->
+      <div class="info-card forecast-card">
+        <h3 class="card-header">Weather Forecast</h3>
+        <ul class="forecast-list" id="forecastList">
+          <li><span class="forecast-day">Loading...</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- FEATURED BUSINESSES -->
+    <div class="featured-businesses" id="featuredBusinesses">
+      <!-- Injected by JS -->
+    </div>
+
+    <!-- DIVIDER -->
     <div class="directory-header">
       <h1>Member Directory</h1>
       <p class="directory-subtitle">Discover the businesses that make Panajachel great</p>
@@ -107,7 +174,7 @@
 
   </main>
 
-  <!-- FOOTER: left=contact | center=social | right=dev info -->
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-inner">
 
@@ -136,7 +203,7 @@
       <!-- RIGHT -->
       <div class="footer-dev">
         <p>WDD231 Class Project</p>
-        <p>Ulises Tzzaj</p>
+        <p>Ulises Tzaj</p>
         <p>&#169;<span id="year"></span> Panajachel, Sololá Chamber of Commerce</p>
         <p id="last-modified"></p>
       </div>
@@ -148,4 +215,5 @@
 </body>
 
 </html>
+
 
