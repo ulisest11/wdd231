@@ -3,7 +3,7 @@
    Screens >= 768px
    =================================================== */
 
-/* Hide hamburger, show full nav */
+/* Hide hamburger, show full nav inline */
 .nav-toggle {
     display: none !important;
 }
