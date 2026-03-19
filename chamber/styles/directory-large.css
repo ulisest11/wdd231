@@ -62,9 +62,7 @@
 }
 
 /* === HERO: taller on desktop === */
-.hero {
-    height: 420px;
-}
+.hero { height: 420px; }
 
 /* === INFO GRID: Events(wide) | Weather | Forecast === */
 .info-grid {

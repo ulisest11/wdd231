@@ -11,7 +11,7 @@ document.getElementById('last-modified').textContent =
 
 // ─── Nav Toggle (mobile) ───────────────────────────────────────────────────
 const navToggle = document.getElementById('navToggle');
-const mainNav = document.getElementById('mainNav');
+const mainNav   = document.getElementById('mainNav');
 
 navToggle.addEventListener('click', () => {
     const isOpen = mainNav.classList.toggle('open');
@@ -42,11 +42,11 @@ function updateWindChill(temp, wind) {
 // ─── Weather API (Open-Meteo — no key needed) ──────────────────────────────
 // Panajachel, Sololá: 14.7460°N, 91.1548°W
 const WMO = {
-    0: 'Clear Sky', 1: 'Mainly Clear', 2: 'Partly Cloudy', 3: 'Overcast',
-    45: 'Foggy', 48: 'Icy Fog', 51: 'Light Drizzle', 53: 'Drizzle', 55: 'Heavy Drizzle',
-    61: 'Light Rain', 63: 'Rain', 65: 'Heavy Rain', 71: 'Light Snow', 73: 'Snow',
-    75: 'Heavy Snow', 80: 'Showers', 81: 'Rain Showers', 82: 'Violent Showers',
-    95: 'Thunderstorm', 96: 'Thunderstorm w/ Hail', 99: 'Severe Thunderstorm'
+    0:'Clear Sky', 1:'Mainly Clear', 2:'Partly Cloudy', 3:'Overcast',
+    45:'Foggy', 48:'Icy Fog', 51:'Light Drizzle', 53:'Drizzle', 55:'Heavy Drizzle',
+    61:'Light Rain', 63:'Rain', 65:'Heavy Rain', 71:'Light Snow', 73:'Snow',
+    75:'Heavy Snow', 80:'Showers', 81:'Rain Showers', 82:'Violent Showers',
+    95:'Thunderstorm', 96:'Thunderstorm w/ Hail', 99:'Severe Thunderstorm'
 };
 
 async function loadWeather() {
@@ -56,7 +56,7 @@ async function loadWeather() {
         '&daily=weathercode,temperature_2m_max,temperature_2m_min' +
         '&timezone=America%2FGuatemala&forecast_days=4';
     try {
-        const res = await fetch(url);
+        const res  = await fetch(url);
         if (!res.ok) throw new Error(`Weather API: ${res.status}`);
         const data = await res.json();
 
@@ -64,20 +64,20 @@ async function loadWeather() {
         const wind = Math.round(data.current.windspeed_10m);
 
         document.getElementById('temperature').textContent = temp;
-        document.getElementById('windSpeed').textContent = wind;
-        document.getElementById('humidity').textContent = data.current.relative_humidity_2m;
-        document.getElementById('conditions').textContent = WMO[data.current.weathercode] ?? 'Unknown';
+        document.getElementById('windSpeed').textContent   = wind;
+        document.getElementById('humidity').textContent    = data.current.relative_humidity_2m;
+        document.getElementById('conditions').textContent  = WMO[data.current.weathercode] ?? 'Unknown';
         updateWindChill(temp, wind);
 
         // Forecast — next 3 days
         const list = document.getElementById('forecastList');
         list.innerHTML = '';
         for (let i = 1; i <= 3; i++) {
-            const day = new Date(data.daily.time[i] + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'long' });
-            const max = Math.round(data.daily.temperature_2m_max[i]);
-            const min = Math.round(data.daily.temperature_2m_min[i]);
+            const day  = new Date(data.daily.time[i] + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'long' });
+            const max  = Math.round(data.daily.temperature_2m_max[i]);
+            const min  = Math.round(data.daily.temperature_2m_min[i]);
             const desc = WMO[data.daily.weathercode[i]] ?? '';
-            const li = document.createElement('li');
+            const li   = document.createElement('li');
             li.innerHTML = `<span class="forecast-day">${day}</span><span>${desc}</span><span class="forecast-temp">${max}°/${min}°C</span>`;
             list.appendChild(li);
         }
@@ -90,20 +90,20 @@ async function loadWeather() {
 
 // ─── Membership Badge ──────────────────────────────────────────────────────
 function getMembershipLabel(level) {
-    if (level === 3) return { label: 'Gold', cls: 'badge-gold' };
+    if (level === 3) return { label: 'Gold',   cls: 'badge-gold'   };
     if (level === 2) return { label: 'Silver', cls: 'badge-silver' };
-    return { label: 'Member', cls: 'badge-member' };
+    return                  { label: 'Member', cls: 'badge-member' };
 }
 
 // ─── Featured Businesses (top 3 by membership level) ──────────────────────
 async function loadFeaturedBusinesses() {
     try {
-        const res = await fetch('data/members.json');
-        if (!res.ok) throw new Error('Could not load members');
+        const res     = await fetch('data/members.json');
+        if (!res.ok)  throw new Error('Could not load members');
         const members = await res.json();
 
         const featured = [...members].sort((a, b) => b.membershipLevel - a.membershipLevel).slice(0, 3);
-        const grid = document.getElementById('featuredBusinesses');
+        const grid     = document.getElementById('featuredBusinesses');
         grid.innerHTML = '';
 
         featured.forEach(biz => {
@@ -120,7 +120,7 @@ async function loadFeaturedBusinesses() {
                     <div class="biz-card-details">
                         <span><strong>EMAIL:</strong> <a href="mailto:${biz.email}">${biz.email}</a></span>
                         <span><strong>PHONE:</strong> ${biz.phone}</span>
-                        <span><strong>URL:</strong> <a href="${biz.website}" target="_blank" rel="noopener">${biz.website.replace('https://', '')}</a></span>
+                        <span><strong>URL:</strong> <a href="${biz.website}" target="_blank" rel="noopener">${biz.website.replace('https://','')}</a></span>
                     </div>
                 </div>`;
             grid.appendChild(card);
@@ -132,8 +132,8 @@ async function loadFeaturedBusinesses() {
 
 // ─── Member Cards ──────────────────────────────────────────────────────────
 const membersContainer = document.getElementById('membersContainer');
-const gridBtn = document.getElementById('gridBtn');
-const listBtn = document.getElementById('listBtn');
+const gridBtn          = document.getElementById('gridBtn');
+const listBtn          = document.getElementById('listBtn');
 let membersData = [];
 let currentView = 'grid';
 
