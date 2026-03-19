@@ -1,9 +1,9 @@
 /* ===================================================
    PANAJACHEL CHAMBER — directory-large.css
-   Loaded for screens >= 768px
+   Screens >= 768px
    =================================================== */
 
-/* === HEADER: hide hamburger, show full nav === */
+/* Hide hamburger, show full nav */
 .nav-toggle {
     display: none !important;
 }
@@ -18,29 +18,29 @@
 
 .main-nav ul {
     flex-direction: row !important;
-    gap: 0.25rem;
+    gap: 0.2rem;
     align-items: center;
 }
 
 .main-nav a {
-    font-size: 0.88rem;
-    padding: 0.4rem 0.75rem;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.7rem;
     white-space: nowrap;
 }
 
-/* === DIRECTORY HEADER === */
+/* Directory title larger */
 .directory-header h1 {
     font-size: 2.6rem;
 }
 
-/* === GRID: 2 columns on tablet === */
+/* 2 columns on tablet */
 .members-container.grid-view {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
 
-/* === LIST: show address column === */
+/* Show address in list view */
 .list-item-address {
     display: block;
     flex: 2;
@@ -50,7 +50,7 @@
     gap: 1rem;
 }
 
-/* === DESKTOP: 3 columns === */
+/* 3 columns on desktop */
 @media (min-width: 1024px) {
     .members-container.grid-view {
         grid-template-columns: repeat(3, 1fr);
