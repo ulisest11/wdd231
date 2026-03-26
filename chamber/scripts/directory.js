@@ -98,15 +98,26 @@ function getMembershipLabel(level) {
 // ─── Featured Businesses (top 3 by membership level) ──────────────────────
 async function loadFeaturedBusinesses() {
     try {
-        const res     = await fetch('data/members.json');
-        if (!res.ok)  throw new Error('Could not load members');
+        const res = await fetch('data/members.json');
+        if (!res.ok) throw new Error('Could not load members');
         const members = await res.json();
 
-        const featured = [...members].sort((a, b) => b.membershipLevel - a.membershipLevel).slice(0, 3);
-        const grid     = document.getElementById('featuredBusinesses');
+        // Filter to Gold (3) and Silver (2) only
+        const eligible = members.filter(m => m.membershipLevel >= 2);
+
+        // Randomly shuffle (Fisher-Yates)
+        for (let i = eligible.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [eligible[i], eligible[j]] = [eligible[j], eligible[i]];
+        }
+
+        // Take 2 or 3 randomly
+        const featured = eligible.slice(0, 3);
+        const grid = document.getElementById('featuredBusinesses');
         grid.innerHTML = '';
 
         featured.forEach(biz => {
+            const { label, cls } = getMembershipLabel(biz.membershipLevel);
             const card = document.createElement('article');
             card.classList.add('biz-card');
             card.innerHTML = `
@@ -118,9 +129,10 @@ async function loadFeaturedBusinesses() {
                     <img src="images/${biz.image}" alt="${biz.name}" class="biz-card-img" loading="lazy"
                         onerror="this.src='images/placeholder.jpg'; this.onerror=null;" />
                     <div class="biz-card-details">
-                        <span><strong>EMAIL:</strong> <a href="mailto:${biz.email}">${biz.email}</a></span>
+                        <span><strong>ADDRESS:</strong> ${biz.address}</span>
                         <span><strong>PHONE:</strong> ${biz.phone}</span>
-                        <span><strong>URL:</strong> <a href="${biz.website}" target="_blank" rel="noopener">${biz.website.replace('https://','')}</a></span>
+                        <span><strong>URL:</strong> <a href="${biz.website}" target="_blank" rel="noopener">${biz.website.replace('https://', '')}</a></span>
+                        <span class="badge ${cls}" style="margin-top:0.25rem">${label} Member</span>
                     </div>
                 </div>`;
             grid.appendChild(card);
