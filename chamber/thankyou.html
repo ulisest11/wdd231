@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Thank you for applying to join the Panajachel Chamber of Commerce." />
+    <meta name="author" content="Ulises Tzaj" />
+    <title>Thank You | Panajachel Chamber of Commerce</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/atitlan.svg" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/directory.css" />
+    <link rel="stylesheet" href="styles/directory-large.css" media="(min-width: 768px)" />
+    <link rel="stylesheet" href="styles/thankyou.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Nunito:wght@300;400;600;700&display=swap"
+        rel="stylesheet" />
+    <script src="scripts/thankyou.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo-area">
+                <img src="images/atitlan.svg" alt="Panajachel Chamber of Commerce logo" class="logo-img" width="50"
+                    height="50" />
+                <div class="logo-text">
+                    <span class="logo-title">Panajachel</span>
+                    <span class="logo-subtitle">Chamber of Commerce</span>
+                </div>
+            </div>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Business Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="podcast.html">Podcast</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Thank you banner">
+        <img src="images/hero-atitlan.jpg" alt="Lake Atitlán with volcanoes at sunrise" class="hero-img"
+            loading="eager" />
+        <div class="hero-overlay">
+            <div class="hero-content thankyou-hero-content">
+                <h1 class="thankyou-hero-title">¡Bienvenido!</h1>
+                <p class="thankyou-hero-sub">Your application has been received</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN -->
+    <main class="directory-main thankyou-main">
+
+        <!-- Gratitude card -->
+        <div class="thankyou-card" role="region" aria-label="Submission confirmation">
+            <div class="thankyou-card-icon" aria-hidden="true">🎉</div>
+            <h2 class="thankyou-card-title">Thank You for Applying!</h2>
+            <p class="thankyou-card-body">
+                We're thrilled that you want to be part of the Panajachel Chamber of Commerce.
+                A member of our team will review your application and reach out to you shortly.
+                Welcome to the community that keeps Panajachel thriving!
+            </p>
+        </div>
+
+        <!-- Submission Summary -->
+        <div class="submission-summary" aria-label="Your submission details">
+            <h3 class="summary-title">Your Submission Details</h3>
+
+            <dl class="summary-grid">
+                <div class="summary-item">
+                    <dt>First Name</dt>
+                    <dd id="sum-firstName">—</dd>
+                </div>
+                <div class="summary-item">
+                    <dt>Last Name</dt>
+                    <dd id="sum-lastName">—</dd>
+                </div>
+                <div class="summary-item">
+                    <dt>Email Address</dt>
+                    <dd id="sum-email">—</dd>
+                </div>
+                <div class="summary-item">
+                    <dt>Mobile Phone</dt>
+                    <dd id="sum-phone">—</dd>
+                </div>
+                <div class="summary-item summary-item-full">
+                    <dt>Business / Organization</dt>
+                    <dd id="sum-orgName">—</dd>
+                </div>
+                <div class="summary-item summary-item-full">
+                    <dt>Membership Level</dt>
+                    <dd id="sum-membershipLevel">—</dd>
+                </div>
+                <div class="summary-item summary-item-full">
+                    <dt>Application Timestamp</dt>
+                    <dd id="sum-timestamp">—</dd>
+                </div>
+            </dl>
+        </div>
+
+        <!-- CTA back -->
+        <div class="thankyou-cta">
+            <a href="directory.html" class="cta-btn">Explore the Member Directory →</a>
+            <a href="index.html" class="cta-btn cta-btn-outline">Return Home</a>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-contact">
+                <strong class="footer-org">Panajachel Chamber of Commerce</strong>
+                <p>Calle del Lago 3-45, Zona 2</p>
+                <p>Barrio Jucanyá, Panajachel</p>
+                <p><a href="mailto:info@panacc.org">info@panacc.org</a></p>
+                <p>(502) 4565 4646</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+                    <img src="images/youtube.svg" alt="YouTube" width="22" height="22" />
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
+                    <img src="images/twitter.svg" alt="Twitter" width="22" height="22" />
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <img src="images/linkedin.svg" alt="LinkedIn" width="22" height="22" />
+                </a>
+            </div>
+            <div class="footer-dev">
+                <p>WDD231 Class Project</p>
+                <p>Ulises Tzaj</p>
+                <p>&#169;<span id="year"></span> Panajachel, Sololá Chamber of Commerce</p>
+                <p id="last-modified"></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

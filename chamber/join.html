@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Join the Panajachel Chamber of Commerce. Apply for membership and connect with local businesses around Lake Atitlán." />
+    <meta name="author" content="Ulises Tzaj" />
+    <title>Join | Panajachel Chamber of Commerce</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/atitlan.svg" />
+
+    <!-- Facebook Open Graph -->
+    <meta property="og:title" content="Join | Panajachel Chamber of Commerce" />
+    <meta property="og:description"
+        content="Become a member of the Panajachel Chamber of Commerce and grow your business alongside Lake Atitlán." />
+    <meta property="og:image" content="https://ulisest11.github.io/wdd231/chamber/images/hero-atitlan.jpg" />
+    <meta property="og:url" content="https://ulisest11.github.io/wdd231/chamber/join.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/directory.css" />
+    <link rel="stylesheet" href="styles/directory-large.css" media="(min-width: 768px)" />
+    <link rel="stylesheet" href="styles/join.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Nunito:wght@300;400;600;700&display=swap"
+        rel="stylesheet" />
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo-area">
+                <img src="images/atitlan.svg" alt="Panajachel Chamber of Commerce logo" class="logo-img" width="50"
+                    height="50" />
+                <div class="logo-text">
+                    <span class="logo-title">Panajachel</span>
+                    <span class="logo-subtitle">Chamber of Commerce</span>
+                </div>
+            </div>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Business Directory</a></li>
+                    <li><a href="join.html" class="active" aria-current="page">Join</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="podcast.html">Podcast</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Welcome banner">
+        <img src="images/hero-atitlan.jpg" alt="Lake Atitlán with volcanoes at sunrise" class="hero-img"
+            loading="eager" />
+        <div class="hero-overlay">
+            <div class="hero-content join-hero-content">
+                <h1 class="join-hero-title">Become a Member</h1>
+                <p class="join-hero-sub">Join the Panajachel Chamber of Commerce and grow alongside Lake Atitlán</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN -->
+    <main class="directory-main join-main">
+
+        <div class="join-layout">
+
+            <!-- LEFT: FORM -->
+            <section class="join-form-section" aria-label="Membership application form">
+                <h2 class="join-section-title">Membership Application</h2>
+
+                <form action="thankyou.html" method="get" class="join-form" novalidate>
+
+                    <!-- First Name -->
+                    <label class="form-group" for="firstName">
+                        <span class="form-label">First Name <span class="required-star" aria-hidden="true">*</span></span>
+                        <input
+                            type="text"
+                            id="firstName"
+                            name="firstName"
+                            title="Enter your first name"
+                            autocomplete="given-name"
+                            required
+                            placeholder="Ana"
+                        />
+                    </label>
+
+                    <!-- Last Name -->
+                    <label class="form-group" for="lastName">
+                        <span class="form-label">Last Name <span class="required-star" aria-hidden="true">*</span></span>
+                        <input
+                            type="text"
+                            id="lastName"
+                            name="lastName"
+                            title="Enter your last name"
+                            autocomplete="family-name"
+                            required
+                            placeholder="Tzaj"
+                        />
+                    </label>
+
+                    <!-- Organizational Title -->
+                    <label class="form-group" for="orgTitle">
+                        <span class="form-label">Title within Organization</span>
+                        <input
+                            type="text"
+                            id="orgTitle"
+                            name="orgTitle"
+                            title="Enter your title within your organization (min 7 characters, letters, hyphens, and spaces only)"
+                            autocomplete="organization-title"
+                            placeholder="General Manager"
+                            pattern="[A-Za-z\- ]{7,}"
+                        />
+                        <span class="form-hint">Min. 7 characters — letters, hyphens, and spaces only</span>
+                    </label>
+
+                    <!-- Email -->
+                    <label class="form-group" for="email">
+                        <span class="form-label">Email Address <span class="required-star" aria-hidden="true">*</span></span>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            title="Enter a valid email address"
+                            autocomplete="email"
+                            required
+                            placeholder="john89@gmail.com"
+                        />
+                    </label>
+
+                    <!-- Mobile Phone -->
+                    <label class="form-group" for="phone">
+                        <span class="form-label">Mobile Phone <span class="required-star" aria-hidden="true">*</span></span>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            title="Enter your mobile phone number"
+                            autocomplete="tel"
+                            required
+                            placeholder="987-555-1234"
+                        />
+                    </label>
+
+                    <!-- Business / Organization Name -->
+                    <label class="form-group" for="orgName">
+                        <span class="form-label">Business / Organization Name <span class="required-star" aria-hidden="true">*</span></span>
+                        <input
+                            type="text"
+                            id="orgName"
+                            name="orgName"
+                            title="Enter your business or organization name"
+                            autocomplete="organization"
+                            required
+                            placeholder="Eco Tours Atitlán"
+                        />
+                    </label>
+
+                    <!-- Membership Level -->
+                    <label class="form-group" for="membershipLevel">
+                        <span class="form-label">Membership Level <span class="required-star" aria-hidden="true">*</span></span>
+                        <select
+                            id="membershipLevel"
+                            name="membershipLevel"
+                            title="Select your desired membership level"
+                            required
+                        >
+                            <option value="" disabled selected>— Select a level —</option>
+                            <option value="np">NP Membership (Non-Profit · No Fee)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <!-- Business Description -->
+                    <label class="form-group" for="description">
+                        <span class="form-label">Business Description</span>
+                        <textarea
+                            id="description"
+                            name="description"
+                            title="Briefly describe your business or organization"
+                            rows="4"
+                            placeholder="Tell us about your business…"
+                        ></textarea>
+                    </label>
+
+                    <!-- Hidden timestamp -->
+                    <input type="hidden" name="timestamp" id="timestamp" />
+
+                    <!-- Submit -->
+                    <button type="submit" class="submit-btn">Apply for Membership</button>
+
+                    <p class="form-required-note"><span class="required-star">*</span> Required fields</p>
+
+                </form>
+            </section>
+
+            <!-- RIGHT: MEMBERSHIP LEVEL CARDS -->
+            <aside class="membership-cards-section" aria-label="Membership levels">
+                <h2 class="join-section-title">Membership Levels</h2>
+
+                <div class="membership-cards">
+
+                    <!-- NP -->
+                    <div class="membership-card card-np" style="animation-delay: 0s">
+                        <div class="membership-card-inner">
+                            <span class="membership-icon" aria-hidden="true">🤝</span>
+                            <h3 class="membership-card-title">Non Profit Membership Level</h3>
+                            <p class="membership-card-fee">No Fee</p>
+                            <button class="learn-more-btn" data-modal="modal-np">Learn More</button>
+                        </div>
+                    </div>
+
+                    <!-- Bronze -->
+                    <div class="membership-card card-bronze" style="animation-delay: 0.15s">
+                        <div class="membership-card-inner">
+                            <span class="membership-icon" aria-hidden="true">🥉</span>
+                            <h3 class="membership-card-title">Bronze Membership Level</h3>
+                            <p class="membership-card-fee">Q 500 / year</p>
+                            <button class="learn-more-btn" data-modal="modal-bronze">Learn More</button>
+                        </div>
+                    </div>
+
+                    <!-- Silver -->
+                    <div class="membership-card card-silver" style="animation-delay: 0.3s">
+                        <div class="membership-card-inner">
+                            <span class="membership-icon" aria-hidden="true">🥈</span>
+                            <h3 class="membership-card-title">Silver Membership Level</h3>
+                            <p class="membership-card-fee">Q 1,200 / year</p>
+                            <button class="learn-more-btn" data-modal="modal-silver">Learn More</button>
+                        </div>
+                    </div>
+
+                    <!-- Gold -->
+                    <div class="membership-card card-gold" style="animation-delay: 0.45s">
+                        <div class="membership-card-inner">
+                            <span class="membership-icon" aria-hidden="true">🥇</span>
+                            <h3 class="membership-card-title">Gold Membership Level</h3>
+                            <p class="membership-card-fee">Q 2,500 / year</p>
+                            <button class="learn-more-btn" data-modal="modal-gold">Learn More</button>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+
+        </div><!-- /join-layout -->
+
+    </main>
+
+    <!-- ===== MODALS ===== -->
+
+    <!-- NP Modal -->
+    <dialog class="membership-modal" id="modal-np" aria-labelledby="modal-np-title">
+        <div class="modal-inner">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <span class="modal-icon" aria-hidden="true">🤝</span>
+            <h2 id="modal-np-title" class="modal-title">Non-Profit Membership</h2>
+            <p class="modal-fee">No Annual Fee</p>
+            <ul class="modal-benefits">
+                <li>Chamber member directory listing</li>
+                <li>Access to monthly networking events</li>
+                <li>Business development resources &amp; guides</li>
+                <li>Community announcements &amp; newsletter</li>
+                <li>Voting rights in Chamber decisions</li>
+            </ul>
+            <button class="modal-apply-btn" onclick="document.getElementById('membershipLevel').value='np'; document.getElementById('modal-np').close();">
+                Select This Level
+            </button>
+        </div>
+    </dialog>
+
+    <!-- Bronze Modal -->
+    <dialog class="membership-modal" id="modal-bronze" aria-labelledby="modal-bronze-title">
+        <div class="modal-inner">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <span class="modal-icon" aria-hidden="true">🥉</span>
+            <h2 id="modal-bronze-title" class="modal-title">Bronze Membership</h2>
+            <p class="modal-fee">Q 500 / year</p>
+            <ul class="modal-benefits">
+                <li>All Non-Profit benefits</li>
+                <li>Business profile on Chamber website</li>
+                <li>10% discount on Chamber events &amp; workshops</li>
+                <li>One free training session per year</li>
+                <li>Social media mention upon joining</li>
+                <li>Access to member-only digital resources</li>
+            </ul>
+            <button class="modal-apply-btn" onclick="document.getElementById('membershipLevel').value='bronze'; document.getElementById('modal-bronze').close();">
+                Select This Level
+            </button>
+        </div>
+    </dialog>
+
+    <!-- Silver Modal -->
+    <dialog class="membership-modal" id="modal-silver" aria-labelledby="modal-silver-title">
+        <div class="modal-inner">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <span class="modal-icon" aria-hidden="true">🥈</span>
+            <h2 id="modal-silver-title" class="modal-title">Silver Membership</h2>
+            <p class="modal-fee">Q 1,200 / year</p>
+            <ul class="modal-benefits">
+                <li>All Bronze benefits</li>
+                <li>Featured listing in the member directory</li>
+                <li>20% discount on all Chamber events</li>
+                <li>Quarterly spotlight in the Chamber newsletter</li>
+                <li>Three free training sessions per year</li>
+                <li>Co-branding opportunities on Chamber materials</li>
+                <li>Priority placement in the business directory</li>
+            </ul>
+            <button class="modal-apply-btn" onclick="document.getElementById('membershipLevel').value='silver'; document.getElementById('modal-silver').close();">
+                Select This Level
+            </button>
+        </div>
+    </dialog>
+
+    <!-- Gold Modal -->
+    <dialog class="membership-modal" id="modal-gold" aria-labelledby="modal-gold-title">
+        <div class="modal-inner">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <span class="modal-icon" aria-hidden="true">🥇</span>
+            <h2 id="modal-gold-title" class="modal-title">Gold Membership</h2>
+            <p class="modal-fee">Q 2,500 / year</p>
+            <ul class="modal-benefits">
+                <li>All Silver benefits</li>
+                <li>Spotlight position on the Chamber home page</li>
+                <li>Featured in the Panajachel Business Podcast</li>
+                <li>30% discount on all Chamber events</li>
+                <li>Unlimited access to workshops &amp; training</li>
+                <li>Dedicated account manager</li>
+                <li>Exclusive invitation to Gold member private events</li>
+                <li>Annual awards ceremony recognition</li>
+            </ul>
+            <button class="modal-apply-btn" onclick="document.getElementById('membershipLevel').value='gold'; document.getElementById('modal-gold').close();">
+                Select This Level
+            </button>
+        </div>
+    </dialog>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-contact">
+                <strong class="footer-org">Panajachel Chamber of Commerce</strong>
+                <p>Calle del Lago 3-45, Zona 2</p>
+                <p>Barrio Jucanyá, Panajachel</p>
+                <p><a href="mailto:info@panacc.org">info@panacc.org</a></p>
+                <p>(502) 4565 4646</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+                    <img src="images/youtube.svg" alt="YouTube" width="22" height="22" />
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
+                    <img src="images/twitter.svg" alt="Twitter" width="22" height="22" />
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <img src="images/linkedin.svg" alt="LinkedIn" width="22" height="22" />
+                </a>
+            </div>
+            <div class="footer-dev">
+                <p>WDD231 Class Project</p>
+                <p>Ulises Tzaj</p>
+                <p>&#169;<span id="year"></span> Panajachel, Sololá Chamber of Commerce</p>
+                <p id="last-modified"></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
