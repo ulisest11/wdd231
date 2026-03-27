@@ -5,7 +5,11 @@
  */
 
 // ─── Footer ────────────────────────────────────────────────────────────────
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+const modEl = document.getElementById('last-modified');
+if (modEl) modEl.textContent = `Last Modification: ${document.lastModified}`;
 document.getElementById('last-modified').textContent =
     `Last Modification: ${document.lastModified}`;
 
