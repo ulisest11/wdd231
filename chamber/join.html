@@ -90,102 +90,63 @@
             <section class="join-form-section" aria-label="Membership application form">
                 <h2 class="join-section-title">Membership Application</h2>
 
-                <form action="thankyou.html" method="get" class="join-form" novalidate>
+                <form action="thankyou.html" method="get" class="join-form">
 
                     <!-- First Name -->
                     <label class="form-group" for="firstName">
-                        <span class="form-label">First Name <span class="required-star" aria-hidden="true">*</span></span>
-                        <input
-                            type="text"
-                            id="firstName"
-                            name="firstName"
-                            title="Enter your first name"
-                            autocomplete="given-name"
-                            required
-                            placeholder="Ana"
-                        />
+                        <span class="form-label">First Name <span class="required-star"
+                                aria-hidden="true">*</span></span>
+                        <input type="text" id="firstName" name="firstName" title="Enter your first name"
+                            autocomplete="given-name" required placeholder="Ana" />
                     </label>
 
                     <!-- Last Name -->
                     <label class="form-group" for="lastName">
-                        <span class="form-label">Last Name <span class="required-star" aria-hidden="true">*</span></span>
-                        <input
-                            type="text"
-                            id="lastName"
-                            name="lastName"
-                            title="Enter your last name"
-                            autocomplete="family-name"
-                            required
-                            placeholder="Tzaj"
-                        />
+                        <span class="form-label">Last Name <span class="required-star"
+                                aria-hidden="true">*</span></span>
+                        <input type="text" id="lastName" name="lastName" title="Enter your last name"
+                            autocomplete="family-name" required placeholder="Tzaj" />
                     </label>
 
                     <!-- Organizational Title -->
                     <label class="form-group" for="orgTitle">
                         <span class="form-label">Title within Organization</span>
-                        <input
-                            type="text"
-                            id="orgTitle"
-                            name="orgTitle"
+                        <input type="text" id="orgTitle" name="orgTitle"
                             title="Enter your title within your organization (min 7 characters, letters, hyphens, and spaces only)"
-                            autocomplete="organization-title"
-                            placeholder="General Manager"
-                            pattern="[A-Za-z\- ]{7,}"
-                        />
+                            autocomplete="organization-title" placeholder="General Manager" pattern="[A-Za-z\- ]{7,}" />
                         <span class="form-hint">Min. 7 characters — letters, hyphens, and spaces only</span>
                     </label>
 
                     <!-- Email -->
                     <label class="form-group" for="email">
-                        <span class="form-label">Email Address <span class="required-star" aria-hidden="true">*</span></span>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            title="Enter a valid email address"
-                            autocomplete="email"
-                            required
-                            placeholder="john89@gmail.com"
-                        />
+                        <span class="form-label">Email Address <span class="required-star"
+                                aria-hidden="true">*</span></span>
+                        <input type="email" id="email" name="email" title="Enter a valid email address"
+                            autocomplete="email" required placeholder="john89@gmail.com" />
                     </label>
 
                     <!-- Mobile Phone -->
                     <label class="form-group" for="phone">
-                        <span class="form-label">Mobile Phone <span class="required-star" aria-hidden="true">*</span></span>
-                        <input
-                            type="tel"
-                            id="phone"
-                            name="phone"
-                            title="Enter your mobile phone number"
-                            autocomplete="tel"
-                            required
-                            placeholder="987-555-1234"
-                        />
+                        <span class="form-label">Mobile Phone <span class="required-star"
+                                aria-hidden="true">*</span></span>
+                        <input type="tel" id="phone" name="phone" title="Enter your mobile phone number"
+                            autocomplete="tel" required placeholder="987-555-1234" />
                     </label>
 
                     <!-- Business / Organization Name -->
                     <label class="form-group" for="orgName">
-                        <span class="form-label">Business / Organization Name <span class="required-star" aria-hidden="true">*</span></span>
-                        <input
-                            type="text"
-                            id="orgName"
-                            name="orgName"
-                            title="Enter your business or organization name"
-                            autocomplete="organization"
-                            required
-                            placeholder="Eco Tours Atitlán"
-                        />
+                        <span class="form-label">Business / Organization Name <span class="required-star"
+                                aria-hidden="true">*</span></span>
+                        <input type="text" id="orgName" name="orgName" title="Enter your business or organization name"
+                            autocomplete="organization" required placeholder="Eco Tours Atitlán" />
                     </label>
 
                     <!-- Membership Level -->
                     <label class="form-group" for="membershipLevel">
-                        <span class="form-label">Membership Level <span class="required-star" aria-hidden="true">*</span></span>
-                        <select
-                            id="membershipLevel"
-                            name="membershipLevel"
-                            title="Select your desired membership level"
-                            required
-                        >
+                        <span class="form-label">Membership Level <span class="required-star"
+                                aria-hidden="true">*</span></span>
+                        <select id="membershipLevel" name="membershipLevel" title="Select your desired membership level"
+                            required>
                             <option value="" disabled selected>— Select a level —</option>
                             <option value="np">NP Membership (Non-Profit · No Fee)</option>
                             <option value="bronze">Bronze Membership</option>
@@ -197,13 +158,9 @@
                     <!-- Business Description -->
                     <label class="form-group" for="description">
                         <span class="form-label">Business Description</span>
-                        <textarea
-                            id="description"
-                            name="description"
-                            title="Briefly describe your business or organization"
-                            rows="4"
-                            placeholder="Tell us about your business…"
-                        ></textarea>
+                        <textarea id="description" name="description"
+                            title="Briefly describe your business or organization" rows="4"
+                            placeholder="Tell us about your business…"></textarea>
                     </label>
 
                     <!-- Hidden timestamp -->
@@ -227,9 +184,11 @@
                     <div class="membership-card card-np" style="animation-delay: 0s">
                         <div class="membership-card-inner">
                             <span class="membership-icon" aria-hidden="true">🤝</span>
-                            <h3 class="membership-card-title">Non Profit Membership Level</h3>
-                            <p class="membership-card-fee">No Fee</p>
-                            <button class="learn-more-btn" data-modal="modal-np">Learn More</button>
+                            <div class="membership-card-text">
+                                <h3 class="membership-card-title">Non Profit Membership Level</h3>
+                                <p class="membership-card-fee">No Fee</p>
+                            </div>
+                            <button type="button" class="learn-more-btn" data-modal="modal-np">Learn More</button>
                         </div>
                     </div>
 
@@ -237,9 +196,11 @@
                     <div class="membership-card card-bronze" style="animation-delay: 0.15s">
                         <div class="membership-card-inner">
                             <span class="membership-icon" aria-hidden="true">🥉</span>
-                            <h3 class="membership-card-title">Bronze Membership Level</h3>
-                            <p class="membership-card-fee">Q 500 / year</p>
-                            <button class="learn-more-btn" data-modal="modal-bronze">Learn More</button>
+                            <div class="membership-card-text">
+                                <h3 class="membership-card-title">Bronze Membership Level</h3>
+                                <p class="membership-card-fee">Q 500 / year</p>
+                            </div>
+                            <button type="button" class="learn-more-btn" data-modal="modal-bronze">Learn More</button>
                         </div>
                     </div>
 
@@ -247,9 +208,11 @@
                     <div class="membership-card card-silver" style="animation-delay: 0.3s">
                         <div class="membership-card-inner">
                             <span class="membership-icon" aria-hidden="true">🥈</span>
-                            <h3 class="membership-card-title">Silver Membership Level</h3>
-                            <p class="membership-card-fee">Q 1,200 / year</p>
-                            <button class="learn-more-btn" data-modal="modal-silver">Learn More</button>
+                            <div class="membership-card-text">
+                                <h3 class="membership-card-title">Silver Membership Level</h3>
+                                <p class="membership-card-fee">Q 1,200 / year</p>
+                            </div>
+                            <button type="button" class="learn-more-btn" data-modal="modal-silver">Learn More</button>
                         </div>
                     </div>
 
@@ -257,25 +220,28 @@
                     <div class="membership-card card-gold" style="animation-delay: 0.45s">
                         <div class="membership-card-inner">
                             <span class="membership-icon" aria-hidden="true">🥇</span>
-                            <h3 class="membership-card-title">Gold Membership Level</h3>
-                            <p class="membership-card-fee">Q 2,500 / year</p>
-                            <button class="learn-more-btn" data-modal="modal-gold">Learn More</button>
+                            <div class="membership-card-text">
+                                <h3 class="membership-card-title">Gold Membership Level</h3>
+                                <p class="membership-card-fee">Q 2,500 / year</p>
+                            </div>
+                            <button type="button" class="learn-more-btn" data-modal="modal-gold">Learn More</button>
                         </div>
                     </div>
 
                 </div>
             </aside>
 
-        </div><!-- /join-layout -->
+        </div>
+        <!-- /join-layout -->
 
     </main>
 
-    <!-- ===== MODALS ===== -->
+    <!-- ===== MODALS (outside <main>, no nesting issues) ===== -->
 
     <!-- NP Modal -->
     <dialog class="membership-modal" id="modal-np" aria-labelledby="modal-np-title">
         <div class="modal-inner">
-            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <button type="button" class="modal-close" aria-label="Close modal">&times;</button>
             <span class="modal-icon" aria-hidden="true">🤝</span>
             <h2 id="modal-np-title" class="modal-title">Non-Profit Membership</h2>
             <p class="modal-fee">No Annual Fee</p>
@@ -286,7 +252,8 @@
                 <li>Community announcements &amp; newsletter</li>
                 <li>Voting rights in Chamber decisions</li>
             </ul>
-            <button class="modal-apply-btn" onclick="document.getElementById('membershipLevel').value='np'; document.getElementById('modal-np').close();">
+            <button type="button" class="modal-apply-btn"
+                onclick="document.getElementById('membershipLevel').value='np'; document.getElementById('modal-np').close();">
                 Select This Level
             </button>
         </div>
@@ -295,7 +262,7 @@
     <!-- Bronze Modal -->
     <dialog class="membership-modal" id="modal-bronze" aria-labelledby="modal-bronze-title">
         <div class="modal-inner">
-            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <button type="button" class="modal-close" aria-label="Close modal">&times;</button>
             <span class="modal-icon" aria-hidden="true">🥉</span>
             <h2 id="modal-bronze-title" class="modal-title">Bronze Membership</h2>
             <p class="modal-fee">Q 500 / year</p>
@@ -307,7 +274,8 @@
                 <li>Social media mention upon joining</li>
                 <li>Access to member-only digital resources</li>
             </ul>
-            <button class="modal-apply-btn" onclick="document.getElementById('membershipLevel').value='bronze'; document.getElementById('modal-bronze').close();">
+            <button type="button" class="modal-apply-btn"
+                onclick="document.getElementById('membershipLevel').value='bronze'; document.getElementById('modal-bronze').close();">
                 Select This Level
             </button>
         </div>
@@ -316,7 +284,7 @@
     <!-- Silver Modal -->
     <dialog class="membership-modal" id="modal-silver" aria-labelledby="modal-silver-title">
         <div class="modal-inner">
-            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <button type="button" class="modal-close" aria-label="Close modal">&times;</button>
             <span class="modal-icon" aria-hidden="true">🥈</span>
             <h2 id="modal-silver-title" class="modal-title">Silver Membership</h2>
             <p class="modal-fee">Q 1,200 / year</p>
@@ -329,7 +297,8 @@
                 <li>Co-branding opportunities on Chamber materials</li>
                 <li>Priority placement in the business directory</li>
             </ul>
-            <button class="modal-apply-btn" onclick="document.getElementById('membershipLevel').value='silver'; document.getElementById('modal-silver').close();">
+            <button type="button" class="modal-apply-btn"
+                onclick="document.getElementById('membershipLevel').value='silver'; document.getElementById('modal-silver').close();">
                 Select This Level
             </button>
         </div>
@@ -338,7 +307,7 @@
     <!-- Gold Modal -->
     <dialog class="membership-modal" id="modal-gold" aria-labelledby="modal-gold-title">
         <div class="modal-inner">
-            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <button type="button" class="modal-close" aria-label="Close modal">&times;</button>
             <span class="modal-icon" aria-hidden="true">🥇</span>
             <h2 id="modal-gold-title" class="modal-title">Gold Membership</h2>
             <p class="modal-fee">Q 2,500 / year</p>
@@ -352,7 +321,8 @@
                 <li>Exclusive invitation to Gold member private events</li>
                 <li>Annual awards ceremony recognition</li>
             </ul>
-            <button class="modal-apply-btn" onclick="document.getElementById('membershipLevel').value='gold'; document.getElementById('modal-gold').close();">
+            <button type="button" class="modal-apply-btn"
+                onclick="document.getElementById('membershipLevel').value='gold'; document.getElementById('modal-gold').close();">
                 Select This Level
             </button>
         </div>
@@ -361,6 +331,8 @@
     <!-- FOOTER -->
     <footer class="site-footer">
         <div class="footer-inner">
+
+            <!-- LEFT -->
             <div class="footer-contact">
                 <strong class="footer-org">Panajachel Chamber of Commerce</strong>
                 <p>Calle del Lago 3-45, Zona 2</p>
@@ -368,6 +340,8 @@
                 <p><a href="mailto:info@panacc.org">info@panacc.org</a></p>
                 <p>(502) 4565 4646</p>
             </div>
+
+            <!-- CENTER -->
             <div class="footer-social">
                 <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
                     <img src="images/youtube.svg" alt="YouTube" width="22" height="22" />
@@ -379,14 +353,18 @@
                     <img src="images/linkedin.svg" alt="LinkedIn" width="22" height="22" />
                 </a>
             </div>
+
+            <!-- RIGHT -->
             <div class="footer-dev">
                 <p>WDD231 Class Project</p>
                 <p>Ulises Tzaj</p>
                 <p>&#169;<span id="year"></span> Panajachel, Sololá Chamber of Commerce</p>
                 <p id="last-modified"></p>
             </div>
+
         </div>
     </footer>
 
 </body>
+
 </html>
