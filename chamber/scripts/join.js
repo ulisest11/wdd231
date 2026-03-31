@@ -15,7 +15,7 @@ document.getElementById('last-modified').textContent =
 
 // ─── Nav Toggle (mobile) ───────────────────────────────────────────────────
 const navToggle = document.getElementById('navToggle');
-const mainNav   = document.getElementById('mainNav');
+const mainNav = document.getElementById('mainNav');
 
 navToggle.addEventListener('click', () => {
     const isOpen = mainNav.classList.toggle('open');
@@ -39,7 +39,7 @@ document.getElementById('timestamp').value = new Date().toLocaleString('en-US', 
 document.querySelectorAll('.learn-more-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         const modalId = btn.getAttribute('data-modal');
-        const modal   = document.getElementById(modalId);
+        const modal = document.getElementById(modalId);
         if (modal) modal.showModal();
     });
 });
@@ -57,8 +57,20 @@ document.querySelectorAll('.membership-modal').forEach(modal => {
         const rect = modal.getBoundingClientRect();
         const clickedOutside = (
             e.clientX < rect.left || e.clientX > rect.right ||
-            e.clientY < rect.top  || e.clientY > rect.bottom
+            e.clientY < rect.top || e.clientY > rect.bottom
         );
         if (clickedOutside) modal.close();
+    });
+});
+
+// ─── "Select This Level" buttons inside modals ────────────────────────────
+document.querySelectorAll('.modal-apply-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const level = btn.getAttribute('data-level');
+        const modalId = btn.getAttribute('data-modal');
+        const select = document.getElementById('membershipLevel');
+        const modal = document.getElementById(modalId);
+        if (select && level) select.value = level;
+        if (modal) modal.close();
     });
 });

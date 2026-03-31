@@ -181,7 +181,7 @@
                 <div class="membership-cards">
 
                     <!-- NP -->
-                    <div class="membership-card card-np" style="animation-delay: 0s">
+                    <div class="membership-card card-np">
                         <div class="membership-card-inner">
                             <span class="membership-icon" aria-hidden="true">🤝</span>
                             <div class="membership-card-text">
@@ -193,7 +193,7 @@
                     </div>
 
                     <!-- Bronze -->
-                    <div class="membership-card card-bronze" style="animation-delay: 0.15s">
+                    <div class="membership-card card-bronze">
                         <div class="membership-card-inner">
                             <span class="membership-icon" aria-hidden="true">🥉</span>
                             <div class="membership-card-text">
@@ -205,7 +205,7 @@
                     </div>
 
                     <!-- Silver -->
-                    <div class="membership-card card-silver" style="animation-delay: 0.3s">
+                    <div class="membership-card card-silver">
                         <div class="membership-card-inner">
                             <span class="membership-icon" aria-hidden="true">🥈</span>
                             <div class="membership-card-text">
@@ -217,7 +217,7 @@
                     </div>
 
                     <!-- Gold -->
-                    <div class="membership-card card-gold" style="animation-delay: 0.45s">
+                    <div class="membership-card card-gold">
                         <div class="membership-card-inner">
                             <span class="membership-icon" aria-hidden="true">🥇</span>
                             <div class="membership-card-text">
@@ -252,8 +252,7 @@
                 <li>Community announcements &amp; newsletter</li>
                 <li>Voting rights in Chamber decisions</li>
             </ul>
-            <button type="button" class="modal-apply-btn"
-                onclick="document.getElementById('membershipLevel').value='np'; document.getElementById('modal-np').close();">
+            <button type="button" class="modal-apply-btn" data-level="np" data-modal="modal-np">
                 Select This Level
             </button>
         </div>
@@ -274,8 +273,7 @@
                 <li>Social media mention upon joining</li>
                 <li>Access to member-only digital resources</li>
             </ul>
-            <button type="button" class="modal-apply-btn"
-                onclick="document.getElementById('membershipLevel').value='bronze'; document.getElementById('modal-bronze').close();">
+            <button type="button" class="modal-apply-btn" data-level="bronze" data-modal="modal-bronze">
                 Select This Level
             </button>
         </div>
@@ -297,8 +295,7 @@
                 <li>Co-branding opportunities on Chamber materials</li>
                 <li>Priority placement in the business directory</li>
             </ul>
-            <button type="button" class="modal-apply-btn"
-                onclick="document.getElementById('membershipLevel').value='silver'; document.getElementById('modal-silver').close();">
+            <button type="button" class="modal-apply-btn" data-level="silver" data-modal="modal-silver">
                 Select This Level
             </button>
         </div>
@@ -321,8 +318,7 @@
                 <li>Exclusive invitation to Gold member private events</li>
                 <li>Annual awards ceremony recognition</li>
             </ul>
-            <button type="button" class="modal-apply-btn"
-                onclick="document.getElementById('membershipLevel').value='gold'; document.getElementById('modal-gold').close();">
+            <button type="button" class="modal-apply-btn" data-level="gold" data-modal="modal-gold">
                 Select This Level
             </button>
         </div>
@@ -337,7 +333,8 @@
                 <strong class="footer-org">Panajachel Chamber of Commerce</strong>
                 <p>Calle del Lago 3-45, Zona 2</p>
                 <p>Barrio Jucanyá, Panajachel</p>
-                <p><a href="mailto:info@panacc.org">info@panacc.org</a></p>
+                <p><a href="/cdn-cgi/l/email-protection#01686f676e4171606f6062622f6e7366"><span class="__cf_email__"
+                            data-cfemail="771e1911183707161916141459180510">[email&#160;protected]</span></a></p>
                 <p>(502) 4565 4646</p>
             </div>
 
@@ -361,7 +358,6 @@
                 <p>&#169;<span id="year"></span> Panajachel, Sololá Chamber of Commerce</p>
                 <p id="last-modified"></p>
             </div>
-
         </div>
     </footer>
 

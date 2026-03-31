@@ -15,15 +15,15 @@
     font-size: 1.8rem;
     font-weight: 900;
     color: #fff;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.45);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
     margin: 0 0 0.25rem;
     line-height: 1.2;
 }
 
 .join-hero-sub {
     font-size: 0.95rem;
-    color: rgba(255,255,255,0.88);
-    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+    color: rgba(255, 255, 255, 0.88);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
     margin: 0;
 }
 
@@ -110,7 +110,7 @@
 .join-form select:focus,
 .join-form textarea:focus {
     border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(26,111,255,0.15);
+    box-shadow: 0 0 0 3px rgba(26, 111, 255, 0.15);
 }
 
 .join-form input:invalid:not(:placeholder-shown),
@@ -195,6 +195,7 @@
         opacity: 0;
         transform: translateX(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -232,10 +233,29 @@
 }
 
 /* Card accent colours */
-.card-np     { border-left: 4px solid var(--member); background: #eaf4fb; }
-.card-bronze { border-left: 4px solid #cd7f32;       background: #fdf6ee; }
-.card-silver { border-left: 4px solid var(--silver); background: #f8f9f9; }
-.card-gold   { border-left: 4px solid var(--gold);   background: #fefde7; }
+.card-np {
+    border-left: 4px solid var(--member);
+    background: #eaf4fb;
+    animation-delay: 0s;
+}
+
+.card-bronze {
+    border-left: 4px solid #cd7f32;
+    background: #fdf6ee;
+    animation-delay: 0.15s;
+}
+
+.card-silver {
+    border-left: 4px solid var(--silver);
+    background: #f8f9f9;
+    animation-delay: 0.3s;
+}
+
+.card-gold {
+    border-left: 4px solid var(--gold);
+    background: #fefde7;
+    animation-delay: 0.45s;
+}
 
 .learn-more-btn {
     flex-shrink: 0;
@@ -265,7 +285,7 @@
     padding: 0;
     max-width: 460px;
     width: calc(100% - 2rem);
-    box-shadow: 0 20px 60px rgba(10,22,40,0.3);
+    box-shadow: 0 20px 60px rgba(10, 22, 40, 0.3);
     background: var(--bg-card);
     position: fixed;
     top: 50%;
@@ -274,7 +294,7 @@
 }
 
 .membership-modal::backdrop {
-    background: rgba(10,22,40,0.55);
+    background: rgba(10, 22, 40, 0.55);
     backdrop-filter: blur(2px);
 }
 
