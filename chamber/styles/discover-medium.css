@@ -4,9 +4,6 @@
    Large screens:  1025px and above
    =================================================== */
 
-/* ════════════════════════════════════════════════════
-   MEDIUM (641px – 1024px)
-   ════════════════════════════════════════════════════ */
 @media (min-width: 641px) {
 
     .discover-header h1 {
@@ -25,7 +22,10 @@
             "area7 area8";
     }
 
-    /* Hover image effect (medium+) */
+    .attract-card {
+        flex-direction: column;
+    }
+
     .attract-figure img {
         transition: transform 0.45s ease, filter 0.45s ease !important;
     }
@@ -36,10 +36,6 @@
     }
 }
 
-
-/* ════════════════════════════════════════════════════
-   LARGE (1025px+)
-   ════════════════════════════════════════════════════ */
 @media (min-width: 1025px) {
 
     .discover-header h1 {
@@ -57,23 +53,26 @@
             "area7 area8 area8";
     }
 
-    /* area8 spans 2 cols — horizontal layout */
+    .attract-card {
+        flex-direction: column !important;
+    }
+
+    .attract-figure {
+        width: 100% !important;
+        height: 200px !important;
+    }
+
     .attract-card.card-area8 {
-        flex-direction: row;
+        flex-direction: row !important;
     }
 
     .attract-card.card-area8 .attract-figure {
-        width: 45%;
-        height: 200px;
+        width: 40% !important;
+        height: auto !important;
+        min-height: 200px !important;
         flex-shrink: 0;
     }
 
-    .attract-card.card-area8 .attract-body {
-        padding: 1.2rem 1.4rem;
-        flex: 1;
-    }
-
-    /* Enhanced hover on large */
     .attract-card:hover .attract-figure img {
         transform: scale(1.09);
         filter: brightness(1.1) saturate(1.2);
