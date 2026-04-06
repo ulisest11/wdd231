@@ -6,7 +6,6 @@
 
 /* ════════════════════════════════════════════════════
    MEDIUM (641px – 1024px)
-   Layout: 2-column mosaic
    ════════════════════════════════════════════════════ */
 @media (min-width: 641px) {
 
@@ -17,6 +16,7 @@
     .attractions-grid {
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
+        align-items: start;
 
         grid-template-areas:
             "area1 area2"
@@ -39,8 +39,6 @@
 
 /* ════════════════════════════════════════════════════
    LARGE (1025px+)
-   Layout: 3-column grid — 3 rows of cards
-   NO card spans multiple rows — all same height
    ════════════════════════════════════════════════════ */
 @media (min-width: 1025px) {
 
@@ -51,6 +49,7 @@
     .attractions-grid {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 1.5rem;
+        align-items: start;
 
         grid-template-areas:
             "area1 area2 area3"
@@ -58,26 +57,20 @@
             "area7 area8 area8";
     }
 
-    /* area8 (Mercado Municipal) spans 2 cols on last row */
+    /* area8 spans 2 cols — horizontal layout */
     .attract-card.card-area8 {
         flex-direction: row;
     }
 
     .attract-card.card-area8 .attract-figure {
         width: 45%;
-        height: 100%;
-        min-height: 200px;
+        height: 200px;
         flex-shrink: 0;
     }
 
     .attract-card.card-area8 .attract-body {
         padding: 1.2rem 1.4rem;
         flex: 1;
-    }
-
-    /* All card figures same height */
-    .attract-figure {
-        height: 200px;
     }
 
     /* Enhanced hover on large */
