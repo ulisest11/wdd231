@@ -50,7 +50,7 @@
         grid-template-areas:
             "area1 area2 area3"
             "area4 area5 area6"
-            "area7 area8 area8";
+            "area7 area8 .  ";
     }
 
     .attract-card {
@@ -62,15 +62,14 @@
         height: 200px !important;
     }
 
+    /* area8 spans 2 cols — keep image same height as others */
     .attract-card.card-area8 {
-        flex-direction: row !important;
+        flex-direction: column !important;
     }
 
     .attract-card.card-area8 .attract-figure {
-        width: 40% !important;
-        height: auto !important;
-        min-height: 200px !important;
-        flex-shrink: 0;
+        width: 100% !important;
+        height: 200px !important;
     }
 
     .attract-card:hover .attract-figure img {
