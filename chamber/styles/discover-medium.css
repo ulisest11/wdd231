@@ -1,0 +1,148 @@
+/* ===================================================
+   PANAJACHEL CHAMBER — discover-medium.css
+   Medium screens: 641px – 1024px
+   Large screens:  1025px and above
+   =================================================== */
+
+/* ════════════════════════════════════════════════════
+   MEDIUM (641px – 1024px)
+   Layout: 2-column asymmetric mosaic using named areas
+   area1 spans 2 cols (hero), rest fill 2-col grid
+   ════════════════════════════════════════════════════ */
+@media (min-width: 641px) {
+
+    .discover-header h1 {
+        font-size: 2.6rem;
+    }
+
+    .attractions-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+
+        grid-template-areas:
+            "area1 area1"
+            "area2 area3"
+            "area4 area5"
+            "area6 area6"
+            "area7 area8";
+    }
+
+    /* area1 (Lago de Atitlán) — full-width hero card */
+    .attract-card[style*="area1"] {
+        flex-direction: row;
+    }
+
+    .attract-card[style*="area1"] .attract-figure {
+        width: 55%;
+        height: auto;
+        min-height: 240px;
+        flex-shrink: 0;
+    }
+
+    .attract-card[style*="area1"] .attract-body {
+        padding: 1.4rem 1.5rem;
+    }
+
+    .attract-card[style*="area1"] .attract-title {
+        font-size: 1.5rem;
+    }
+
+    .attract-card[style*="area1"] .attract-desc {
+        font-size: 0.9rem;
+    }
+
+    /* area6 (Casa Cakchiquel) — full-width accent card */
+    .attract-card[style*="area6"] {
+        flex-direction: row-reverse;
+    }
+
+    .attract-card[style*="area6"] .attract-figure {
+        width: 45%;
+        height: auto;
+        min-height: 220px;
+        flex-shrink: 0;
+    }
+
+    .attract-card[style*="area6"] .attract-body {
+        padding: 1.2rem 1.4rem;
+    }
+
+    /* ── Hover image effect (medium+) ── */
+    .attract-figure img {
+        transition: transform 0.45s ease, filter 0.45s ease !important;
+    }
+
+    .attract-card:hover .attract-figure img {
+        transform: scale(1.07);
+        filter: brightness(1.08) saturate(1.15);
+    }
+}
+
+
+/* ════════════════════════════════════════════════════
+   LARGE (1025px+)
+   Layout: 3-column editorial mosaic — truly different
+   from medium. Uses named areas with varied sizing.
+   ════════════════════════════════════════════════════ */
+@media (min-width: 1025px) {
+
+    .discover-header h1 {
+        font-size: 3rem;
+    }
+
+    .attractions-grid {
+        grid-template-columns: 1.6fr 1fr 1fr;
+        gap: 1.5rem;
+
+        /*
+         * Row 1: area1 spans rows 1-2 (tall hero) | area2 | area3
+         * Row 2: area1 continues                  | area4 | area5
+         * Row 3: area6 | area7 | area8
+         */
+        grid-template-areas:
+            "area1 area2 area3"
+            "area1 area4 area5"
+            "area6 area7 area8";
+    }
+
+    /* area1 — tall vertical hero spanning 2 rows */
+    .attract-card[style*="area1"] {
+        flex-direction: column;
+    }
+
+    .attract-card[style*="area1"] .attract-figure {
+        width: 100%;
+        height: 320px;
+        flex-shrink: 0;
+    }
+
+    .attract-card[style*="area1"] .attract-body {
+        padding: 1.4rem 1.5rem;
+        flex: 1;
+    }
+
+    .attract-card[style*="area1"] .attract-title {
+        font-size: 1.6rem;
+    }
+
+    .attract-card[style*="area1"] .attract-desc {
+        font-size: 0.92rem;
+    }
+
+    /* area6 — back to normal 3-col card in large */
+    .attract-card[style*="area6"] {
+        flex-direction: column;
+    }
+
+    .attract-card[style*="area6"] .attract-figure {
+        width: 100%;
+        height: 200px;
+        flex-shrink: 0;
+    }
+
+    /* Enhanced hover on large */
+    .attract-card:hover .attract-figure img {
+        transform: scale(1.09);
+        filter: brightness(1.1) saturate(1.2);
+    }
+}

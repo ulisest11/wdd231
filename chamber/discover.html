@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover the top 8 points of interest in Panajachel, Sololá — from Lake Atitlán to the Mercado Municipal. Explore the beauty and culture of Guatemala's highland gem." />
+  <meta name="author" content="Ulises Tzaj" />
+  <title>Discover Panajachel | Panajachel Chamber of Commerce</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/atitlan.svg" />
+
+  <!-- Facebook Open Graph -->
+  <meta property="og:title" content="Discover Panajachel | Panajachel Chamber of Commerce" />
+  <meta property="og:description" content="Explore the top attractions in Panajachel, Sololá — Lake Atitlán, Calle Santander, the Natural Reserve, and more." />
+  <meta property="og:image" content="https://ulisest11.github.io/wdd231/chamber/images/hero-atitlan.jpg" />
+  <meta property="og:url" content="https://ulisest11.github.io/wdd231/chamber/discover.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/directory.css" />
+  <link rel="stylesheet" href="styles/discover.css" />
+  <link rel="stylesheet" href="styles/discover-medium.css" media="(min-width: 641px)" />
+  <link rel="stylesheet" href="styles/directory-large.css" media="(min-width: 768px)" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Module script -->
+  <script src="scripts/discover.mjs" type="module" defer></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-area">
+        <img src="images/atitlan.svg" alt="Panajachel Chamber of Commerce logo" class="logo-img" width="50" height="50" />
+        <div class="logo-text">
+          <span class="logo-title">Panajachel</span>
+          <span class="logo-subtitle">Chamber of Commerce</span>
+        </div>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html" class="active" aria-current="page">Discover</a></li>
+          <li><a href="directory.html">Business Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="podcast.html">Podcast</a></li>
+          <li><a href="events.html">Events</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Discover Panajachel banner">
+    <img
+      src="images/hero-atitlan.jpg"
+      alt="Panoramic view of Lake Atitlán and the surrounding volcanoes"
+      class="hero-img"
+      loading="eager"
+    />
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <a href="events.html" class="hero-btn">Keynote Tickets</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <main class="discover-main">
+
+    <!-- Page Heading -->
+    <div class="discover-header">
+      <h1>Discover Panajachel</h1>
+      <p class="discover-subtitle">Eight unmissable places in the heart of Lake Atitlán</p>
+    </div>
+
+    <!-- Visitor Message Banner -->
+    <div class="visitor-banner" role="status" aria-live="polite">
+      <span class="visitor-banner-icon" aria-hidden="true">👋</span>
+      <p><span id="visitorMessage">Loading...</span></p>
+    </div>
+
+    <!-- Attractions Grid — cards injected by discover.mjs -->
+    <section
+      class="attractions-grid"
+      id="attractionsGrid"
+      aria-label="Points of interest in Panajachel"
+    >
+      <!-- Cards are injected by discover.mjs -->
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <!-- LEFT -->
+      <div class="footer-contact">
+        <strong class="footer-org">Panajachel Chamber of Commerce</strong>
+        <p>Calle del Lago 3-45, Zona 2</p>
+        <p>Barrio Jucanyá, Panajachel</p>
+        <p><a href="mailto:info@panacc.org">info@panacc.org</a></p>
+        <p>(502) 4565 4646</p>
+      </div>
+
+      <!-- CENTER -->
+      <div class="footer-social">
+        <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+          <img src="images/youtube.svg" alt="YouTube" width="22" height="22" />
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
+          <img src="images/twitter.svg" alt="Twitter" width="22" height="22" />
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <img src="images/linkedin.svg" alt="LinkedIn" width="22" height="22" />
+        </a>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="footer-dev">
+        <p>WDD231 Class Project</p>
+        <p>Ulises Tzaj</p>
+        <p>&#169;<span id="year"></span> Panajachel, Sololá Chamber of Commerce</p>
+        <p id="last-modified"></p>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

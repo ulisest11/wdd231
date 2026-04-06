@@ -1,0 +1,188 @@
+/* ===================================================
+   PANAJACHEL CHAMBER — discover.css
+   Mobile-first base styles (320px – 640px)
+   =================================================== */
+
+/* ─── Discover Main ──────────────────────────────── */
+.discover-main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 3rem;
+}
+
+/* ─── Page Header ────────────────────────────────── */
+.discover-header {
+    text-align: center;
+    margin-bottom: 1.75rem;
+}
+
+.discover-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--primary);
+    margin-bottom: 0.4rem;
+}
+
+.discover-subtitle {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+/* ─── Visitor Message Banner ─────────────────────── */
+.visitor-banner {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(135deg, #eaf4fb 0%, #f0f7ff 100%);
+    border: 1px solid #bdd8f5;
+    border-left: 4px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 0.85rem 1.1rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+    animation: fadeUp 0.5s ease both;
+}
+
+.visitor-banner-icon {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.visitor-banner p {
+    margin: 0;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+#visitorMessage {
+    display: inline;
+}
+
+/* ─── Attractions Grid ───────────────────────────── */
+/*
+   SMALL (320-640): Single column, all cards stacked
+   grid-template-areas: area1 / area2 / ... / area8
+*/
+.attractions-grid {
+    display: grid;
+    gap: 1.25rem;
+
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "area1"
+        "area2"
+        "area3"
+        "area4"
+        "area5"
+        "area6"
+        "area7"
+        "area8";
+}
+
+/* ─── Attraction Card ────────────────────────────── */
+.attract-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    animation: fadeUp 0.45s ease both;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.attract-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Figure / Image */
+.attract-figure {
+    margin: 0;
+    overflow: hidden;
+    height: 200px;
+    background: var(--border);
+    flex-shrink: 0;
+}
+
+.attract-figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* NO hover effect on mobile */
+    transition: none;
+}
+
+/* Card body */
+.attract-body {
+    padding: 1rem 1.1rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.attract-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 0 0 0.35rem;
+}
+
+.attract-address {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    font-style: normal;
+    margin-bottom: 0.65rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.3rem;
+}
+
+.attract-address::before {
+    content: "📍";
+    font-size: 0.75rem;
+    flex-shrink: 0;
+    margin-top: 0.05rem;
+}
+
+.attract-desc {
+    font-size: 0.86rem;
+    color: var(--text);
+    line-height: 1.65;
+    flex: 1;
+    margin: 0 0 1rem;
+}
+
+/* Learn More Button */
+.learn-more-btn {
+    display: inline-block;
+    align-self: flex-start;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1.2rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background var(--transition), transform var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.learn-more-btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+.learn-more-btn:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
