@@ -105,14 +105,14 @@
             "area6 area7 area8";
     }
 
-    /* area1 — tall vertical hero spanning 2 rows */
+    /* area1 — spans 2 rows: image fixed at 200px, body fills the rest */
     .attract-card[style*="area1"] {
         flex-direction: column;
     }
 
     .attract-card[style*="area1"] .attract-figure {
         width: 100%;
-        height: 320px;
+        height: 200px;
         flex-shrink: 0;
     }
 
@@ -129,7 +129,7 @@
         font-size: 0.92rem;
     }
 
-    /* area6 — back to normal 3-col card in large */
+    /* area6 — normal 3-col card */
     .attract-card[style*="area6"] {
         flex-direction: column;
     }
