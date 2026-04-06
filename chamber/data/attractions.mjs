@@ -45,14 +45,14 @@ export const attractions = [
     "id": 7,
     "name": "Iglesia de San Francisco de Asís",
     "address": "Calle Principal s/n, Barrio Los Corrales, Panajachel, Sololá",
-    "description": "One of the oldest colonial-era churches in the region, featuring a striking whitewashed baroque façade, hand-carved wooden altarpieces, and centuries-old murals.",
+    "description": "One of the oldest colonial-era churches in the region, featuring a whitewashed baroque façade, hand-carved wooden altarpieces, and centuries-old murals.",
     "image": "images/iglesia.webp"
   },
   {
     "id": 8,
     "name": "Mercado Municipal de Panajachel",
     "address": "Calle 15 de Febrero s/n, Zona 1, Panajachel, Sololá",
-    "description": "The town's lively public market where vendors sell fresh tropical fruits, vegetables, and an extraordinary variety of hand-woven Mayan textiles and artisan goods.",
+    "description": "The town's lively public market where vendors sell fresh fruits, vegetables, and hand-woven Mayan textiles. The best place to experience local culture firsthand.",
     "image": "images/mercado-municipal.webp"
   }
 ];
