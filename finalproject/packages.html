@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our tour packages to discover Guatemala's Maya heritage">
+    <title>Maya Tours Guatemala | Tour Packages</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/mayatours.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Maya Tours Guatemala</h1>
+            </div>
+            <button class="hamburger" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav">
+                <ul>
+                    <li><a href="mayatours.html">Home</a></li>
+                    <li><a href="packages.html" class="active">Tours</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Our Tour Packages</h1>
+                <p>Discover Guatemala through our carefully curated experiences</p>
+            </div>
+            <picture>
+            
+                <!-- Imagen grande para desktop -->
+                <source media="(min-width: 768px)" srcset="images/hero-tikal-desktop.webp">
+                <!-- Imagen pequeña para mobile -->
+                <source media="(max-width: 767px)" srcset="images/hero-tikal-mobile.webp">
+                <!-- Imagen por defecto (opcional) -->
+                <img src="images/hero-tikal-desktop.webp" alt="Tikal Mayan ruins" class="lazy" loading="lazy">
+            </picture>
+
+
+        </section>
+
+        <section class="tours-filter">
+            <div class="container">
+                <div class="filter-options">
+                    <button class="filter-btn active" data-filter="all">All Tours</button>
+                    <button class="filter-btn" data-filter="cultural">Cultural</button>
+                    <button class="filter-btn" data-filter="adventure">Adventure</button>
+                    <button class="filter-btn" data-filter="nature">Nature</button>
+                </div>
+                <div class="sort-options">
+                    <label for="sort">Sort by:</label>
+                    <select id="sort">
+                        <option value="price-asc">Price (Low to High)</option>
+                        <option value="price-desc">Price (High to Low)</option>
+                        <option value="duration-asc">Duration (Short to Long)</option>
+                        <option value="duration-desc">Duration (Long to Short)</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="all-tours">
+            <div class="container">
+                <div class="tours-grid" id="allTours">
+                    <!-- Tour 1 - Tikal -->
+                    <div class="tour-card" data-type="cultural">
+                        <div class="tour-img">
+                            <img src="images/placeholder-tikal.jpg" alt="Tikal Mayan ruins" loading="lazy">
+                        </div>
+                        <div class="tour-info">
+                            <h3>Tikal Explorer</h3>
+                            <p>Full-day tour of the majestic Tikal ruins, including sunrise views from Temple IV.</p>
+                            <div class="tour-meta">
+                                <span>1 day</span>
+                                <span>cultural</span>
+                            </div>
+                            <div class="tour-price">$120</div>
+                            <a href="contact.html?tour=1" class="btn">Book Now</a>
+                        </div>
+                    </div>
+        
+                    <!-- Tour 2 - Semuc Champey -->
+                    <div class="tour-card" data-type="nature">
+                        <div class="tour-img">
+                            <img src="images/placeholder-semuc.jpg" alt="Semuc Champey pools" loading="lazy">
+                        </div>
+                        <div class="tour-info">
+                            <h3>Semuc Champey Adventure</h3>
+                            <p>Explore the turquoise pools and limestone bridges of this natural wonder.</p>
+                            <div class="tour-meta">
+                                <span>2 days</span>
+                                <span>nature</span>
+                            </div>
+                            <div class="tour-price">$180</div>
+                            <a href="contact.html?tour=2" class="btn">Book Now</a>
+                        </div>
+                    </div>
+        
+                    
+                    <div class="tour-card" data-type="cultural">
+                        <div class="tour-img">
+                            <img src="images/placeholder-antigua.jpg" alt="Antigua Guatemala" loading="lazy">
+                        </div>
+                        <div class="tour-info">
+                            <h3>Antigua Cultural Walk</h3>
+                            <p>Discover the colonial charm of Antigua with visits to historic sites and local markets.</p>
+                            <div class="tour-meta">
+                                <span>1 day</span>
+                                <span>cultural</span>
+                            </div>
+                            <div class="tour-price">$85</div>
+                            <a href="contact.html?tour=3" class="btn">Book Now</a>
+                        </div>
+                    </div>
+        
+                    
+                    <div class="tour-card" data-type="cultural">
+                        <div class="tour-img">
+                            <img src="images/placeholder-atitlan.jpg" alt="Lake Atitlán" loading="lazy">
+                        </div>
+                        <div class="tour-info">
+                            <h3>Lake Atitlán Villages</h3>
+                            <p>Visit indigenous villages around Lake Atitlán and learn about local traditions.</p>
+                            <div class="tour-meta">
+                                <span>1 day</span>
+                                <span>cultural</span>
+                            </div>
+                            <div class="tour-price">$95</div>
+                            <a href="contact.html?tour=4" class="btn">Book Now</a>
+                        </div>
+                    </div>
+        
+                   
+                    <div class="tour-card" data-type="adventure">
+                        <div class="tour-img">
+                            <img src="images/placeholder-pacaya.jpg" alt="Pacaya Volcano" loading="lazy">
+                        </div>
+                        <div class="tour-info">
+                            <h3>Pacaya Volcano Hike</h3>
+                            <p>Hike to the active Pacaya Volcano and roast marshmallows over volcanic heat.</p>
+                            <div class="tour-meta">
+                                <span>1 day</span>
+                                <span>adventure</span>
+                            </div>
+                            <div class="tour-price">$75</div>
+                            <a href="contact.html?tour=5" class="btn">Book Now</a>
+                        </div>
+                    </div>
+        
+                    
+                    <div class="tour-card" data-type="cultural">
+                        <div class="tour-img">
+                            <img src="images/placeholder-textiles.jpg" alt="Maya Textiles" loading="lazy">
+                        </div>
+                        <div class="tour-info">
+                            <h3>Maya Textile Experience</h3>
+                            <p>Learn about traditional weaving techniques and create your own textile piece.</p>
+                            <div class="tour-meta">
+                                <span>1 day</span>
+                                <span>cultural</span>
+                            </div>
+                            <div class="tour-price">$65</div>
+                            <a href="contact.html?tour=6" class="btn">Book Now</a>
+                        </div>
+                    </div>
+        
+                    
+                    <div class="tour-card" data-type="adventure">
+                        <div class="tour-img">
+                            <img src="images/placeholder-rio-dulce.jpg" alt="Rio Dulce" loading="lazy">
+                        </div>
+                        <div class="tour-info">
+                            <h3>Rio Dulce Kayaking</h3>
+                            <p>Kayak through the lush Rio Dulce canyon and visit Livingston.</p>
+                            <div class="tour-meta">
+                                <span>2 days</span>
+                                <span>adventure</span>
+                            </div>
+                            <div class="tour-price">$150</div>
+                            <a href="contact.html?tour=7" class="btn">Book Now</a>
+                        </div>
+                    </div>
+        
+                    
+                    <div class="tour-card" data-type="nature">
+                        <div class="tour-img">
+                            <img src="images/placeholder-coffee.jpg" alt="Coffee Farm" loading="lazy">
+                        </div>
+                        <div class="tour-info">
+                            <h3>Coffee Farm Tour</h3>
+                            <p>Visit a local coffee farm and learn about the production process from bean to cup.</p>
+                            <div class="tour-meta">
+                                <span>1 day</span>
+                                <span>nature</span>
+                            </div>
+                            <div class="tour-price">$70</div>
+                            <a href="contact.html?tour=8" class="btn">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Can't find what you're looking for?</h2>
+                <p>We specialize in custom tours tailored to your interests and schedule.</p>
+                <a href="contact.html" class="btn">Request a Custom Tour</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Maya Tours Guatemala</h3>
+                    <p>Specializing in authentic cultural, natural, and adventure experiences throughout Guatemala.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="mayatours.html">Home</a></li>
+                        <li><a href="packages.html">Tours</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@mayatoursgt.com</p>
+                    <p>Phone: +502 1234 5678</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>©2025 🌵 Ulises Antonio Tzaj 🌵 Guatemala</p>
+                <p>Last Updated: <span id="last-updated"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/mayatours.js"></script>
+</body>
+
+</html>
