@@ -19,45 +19,75 @@ export function initContactForm() {
     }
   }
 
+  // Clear error on a field when user starts typing/selecting
+  form.querySelectorAll('input, select, textarea').forEach(field => {
+    field.addEventListener('input', () => clearFieldError(field));
+    field.addEventListener('change', () => clearFieldError(field));
+  });
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
+    // Clear all previous errors
+    clearAllErrors();
+
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const subject = form.subject.value;
+    const message = form.message.value.trim();
+
+    let hasError = false;
+
+    if (!name) {
+      setFieldError('name', 'Full name is required.');
+      hasError = true;
+    }
+
+    if (!email) {
+      setFieldError('email', 'Email is required.');
+      hasError = true;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setFieldError('email', 'Please enter a valid email address.');
+      hasError = true;
+    }
+
+    if (!subject) {
+      setFieldError('subject', 'Please select a subject.');
+      hasError = true;
+    }
+
+    if (!message) {
+      setFieldError('message', 'Message is required.');
+      hasError = true;
+    }
+
+    if (hasError) {
+      const firstError = form.querySelector('.field-error-msg');
+      firstError?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    // All valid — save and redirect
     const formData = {
-      name: form.name.value.trim(),
-      email: form.email.value.trim(),
+      name,
+      email,
       phone: form.phone.value.trim(),
-      subject: form.subject.value,
-      message: form.message.value.trim(),
+      subject,
+      message,
       newsletter: form.newsletter.checked,
       date: new Date().toISOString()
     };
 
-    // Validate required fields
-    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
-      showFormError('Please fill in all required fields.');
-      return;
-    }
-
-    // Email format validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      showFormError('Please enter a valid email address.');
-      return;
-    }
-
-    // Save to localStorage
     const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
     submissions.push(formData);
     localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
 
-    // Save last submission summary
     saveToLocalStorage('lastSubmission', {
       name: formData.name,
       subject: formData.subject,
       date: formData.date
     });
 
-    // Redirect to form action page with URL params
     const searchParams = new URLSearchParams({
       name: formData.name,
       email: formData.email,
@@ -71,16 +101,27 @@ export function initContactForm() {
   });
 }
 
-function showFormError(message) {
-  let errorDiv = document.getElementById('formError');
-  if (!errorDiv) {
-    errorDiv = document.createElement('div');
-    errorDiv.id = 'formError';
-    errorDiv.className = 'form-error';
-    errorDiv.setAttribute('role', 'alert');
-    const form = document.getElementById('contactForm');
-    form.prepend(errorDiv);
+function setFieldError(fieldId, message) {
+  const field = document.getElementById(fieldId);
+  if (!field) return;
+  field.classList.add('field-invalid');
+  let msg = field.parentElement.querySelector('.field-error-msg');
+  if (!msg) {
+    msg = document.createElement('span');
+    msg.className = 'field-error-msg';
+    msg.setAttribute('role', 'alert');
+    field.after(msg);
   }
-  errorDiv.textContent = message;
-  errorDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  msg.textContent = message;
+}
+
+function clearFieldError(field) {
+  field.classList.remove('field-invalid');
+  const msg = field.parentElement.querySelector('.field-error-msg');
+  if (msg) msg.remove();
+}
+
+function clearAllErrors() {
+  document.querySelectorAll('.field-invalid').forEach(f => f.classList.remove('field-invalid'));
+  document.querySelectorAll('.field-error-msg').forEach(m => m.remove());
 }
