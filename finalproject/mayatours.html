@@ -1,198 +1,137 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Maya Tours Guatemala - Explore the rich cultural and natural heritage of Guatemala">
-    <title>Maya Tours Guatemala | Home</title>
-    <meta name="author" content="Ulises Tzaj">
-    <meta name="description" content="Maya Tours Guatemala - Ulises Tzaj">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@700;800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles/mayatours.css">
-    
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Maya Tours Guatemala - Explore the rich cultural and natural heritage of Guatemala with expert local guides.">
+  <meta name="author" content="Ulises Tzaj">
+  <title>Maya Tours Guatemala | Home</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Maya Tours Guatemala | Authentic Cultural & Nature Tours">
+  <meta property="og:description" content="Explore Guatemala's rich Maya heritage and breathtaking natural wonders with expert local guides.">
+  <meta property="og:image" content="images/hero-desktop.webp">
+  <meta property="og:url" content="https://mayatoursguatemala.com">
+  <meta property="og:site_name" content="Maya Tours Guatemala">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Maya Tours Guatemala">
+  <meta name="twitter:description" content="Authentic cultural and nature tours throughout Guatemala.">
+  <meta name="twitter:image" content="images/hero-desktop.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/mayatours.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
-
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <h1>Maya Tours Guatemala</h1>
-            </div>
-            <button class="hamburger" aria-label="Menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <nav class="nav">
-                <ul>
-                    <li><a href="mayatours.html" class="active">Home</a></li>
-                    <li><a href="packages.html">Tours</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+  <header class="header">
+    <div class="container">
+      <div class="logo"><h1>Maya Tours Guatemala</h1></div>
+      <button class="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="mayatours.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="packages.html">Tours</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" aria-label="Welcome banner">
+      <div class="hero-content">
+        <h2>Discover the Heart of the Maya World</h2>
+        <p>Immerse yourself in Guatemala's rich cultural heritage and breathtaking natural wonders</p>
+        <a href="packages.html" class="btn">Explore Tours</a>
+      </div>
+      <picture>
+        <source media="(min-width: 768px)" srcset="images/hero-desktop.webp">
+        <source media="(max-width: 767px)" srcset="images/hero-mobile.webp">
+        <img src="images/hero-desktop.webp" alt="Semuc Champey natural pools, Guatemala" class="lazy" loading="lazy">
+      </picture>
+    </section>
+    <section class="featured-tours">
+      <div class="container">
+        <h2>Featured Tours</h2>
+        <div class="tours-grid" id="featuredTours" aria-live="polite" aria-label="Featured tours list">
+          <p class="loading-text">Loading tours…</p>
         </div>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h2>Discover the Heart of the Maya World</h2>
-                <p>Immerse yourself in Guatemala's rich cultural heritage and breathtaking natural wonders</p>
-                <a href="packages.html" class="btn">Explore Tours</a>
-            </div>
-            <picture>
-            
-                
-                <source media="(min-width: 768px)" srcset="images/hero-desktop.webp">
-                
-                <source media="(max-width: 767px)" srcset="images/hero-mobile.webp">
-                
-                <img src="images/hero-desktop.webp" alt="Semuc Chmapey" class="lazy" loading="lazy">
-            </picture>
-
-        </section>
-
-        <section class="featured-tours">
-            <div class="container">
-                <h2>Featured Tours</h2>
-                <div class="tours-grid">
-                    
-                    <div class="tour-card">
-                        <div class="tour-img">
-                            <img src="images/placeholder-tikal.jpg" alt="Tikal Mayan ruins" loading="lazy">
-                        </div>
-                        <div class="tour-info">
-                            <h3>Tikal Explorer</h3>
-                            <p>Full-day tour of the majestic Tikal ruins, including sunrise views from Temple IV.</p>
-                            <div class="tour-meta">
-                                <span>1 day</span>
-                                <span>cultural</span>
-                            </div>
-                            <div class="tour-price">$120</div>
-                            <a href="contact.html?tour=1" class="btn">Book Now</a>
-                        </div>
-                    </div>
-        
-                   
-                    <div class="tour-card">
-                        <div class="tour-img">
-                            <img src="images/placeholder-semuc.jpg" alt="Semuc Champey pools" loading="lazy">
-                        </div>
-                        <div class="tour-info">
-                            <h3>Semuc Champey Adventure</h3>
-                            <p>Explore the turquoise pools and limestone bridges of this natural wonder.</p>
-                            <div class="tour-meta">
-                                <span>2 days</span>
-                                <span>nature</span>
-                            </div>
-                            <div class="tour-price">$180</div>
-                            <a href="contact.html?tour=2" class="btn">Book Now</a>
-                        </div>
-                    </div>
-        
-                    
-                    <div class="tour-card">
-                        <div class="tour-img">
-                            <img src="images/placeholder-antigua.jpg" alt="Antigua Guatemala" loading="lazy">
-                        </div>
-                        <div class="tour-info">
-                            <h3>Antigua Cultural Walk</h3>
-                            <p>Discover the colonial charm of Antigua with visits to historic sites and local markets.</p>
-                            <div class="tour-meta">
-                                <span>1 day</span>
-                                <span>cultural</span>
-                            </div>
-                            <div class="tour-price">$85</div>
-                            <a href="contact.html?tour=3" class="btn">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="cultural-highlights">
-            <div class="container">
-                <h2>Cultural Highlights</h2>
-                <div class="highlights-grid">
-                    <article class="highlight-card">
-                        <div class="highlight-img">
-                            
-                            <img src="images/placeholder-culture1.jpg" alt="Maya ceremony" class="lazy" loading="lazy">
-                        </div>
-                        <h3>Maya Traditions</h3>
-                        <p>Experience authentic Maya ceremonies and learn about ancient traditions that continue today.
-                        </p>
-                    </article>
-                    <article class="highlight-card">
-                        <div class="highlight-img">
-                            
-                            <img src="images/placeholder-culture2.jpg" alt="Guatemalan textiles" class="lazy"
-                                loading="lazy">
-                        </div>
-                        <h3>Textile Arts</h3>
-                        <p>Discover the vibrant world of Guatemalan textiles and their deep cultural significance.</p>
-                    </article>
-                    <article class="highlight-card">
-                        <div class="highlight-img">
-                            
-                            <img src="images/placeholder-culture3.jpg" alt="Guatemalan cuisine" class="lazy"
-                                loading="lazy">
-                        </div>
-                        <h3>Local Cuisine</h3>
-                        <p>Taste the flavors of Guatemala with traditional dishes and cooking demonstrations.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="testimonials">
-            <div class="container">
-                <h2>What Our Travelers Say</h2>
-                <div class="testimonials-slider" id="testimonialsSlider">
-                    
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <h3>Maya Tours Guatemala</h3>
-                    <p>Specializing in authentic cultural, natural, and adventure experiences throughout Guatemala.</p>
-                </div>
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="mayatours.html">Home</a></li>
-                        <li><a href="packages.html">Tours</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h3>Contact Us</h3>
-                    <p>Email: info@mayatoursgt.com</p>
-                    <p>Phone: +502 1234 5678</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>©2025 🌵 Ulises Antonio Tzaj 🌵 Guatemala</p>
-                <p>Last Updated: <span id="last-updated"></span></p>
-            </div>
+        <div class="view-all-wrap" style="text-align:center;margin-top:2rem;">
+          <a href="packages.html" class="btn secondary-btn">View All Tours</a>
         </div>
-    </footer>
-
-    <script src="scripts/mayatours.js"></script>
+      </div>
+    </section>
+    <section class="cultural-highlights">
+      <div class="container">
+        <h2>Cultural Highlights</h2>
+        <div class="highlights-grid">
+          <article class="highlight-card">
+            <div class="highlight-img">
+              <img src="images/placeholder-culture1.jpg" alt="Maya ceremony" class="lazy" loading="lazy">
+            </div>
+            <div class="highlight-info">
+              <h3>Maya Traditions</h3>
+              <p>Experience authentic Maya ceremonies and learn about ancient traditions that continue today.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="highlight-img">
+              <img src="images/placeholder-culture2.jpg" alt="Guatemalan textiles" class="lazy" loading="lazy">
+            </div>
+            <div class="highlight-info">
+              <h3>Textile Arts</h3>
+              <p>Discover the vibrant world of Guatemalan textiles and their deep cultural significance.</p>
+            </div>
+          </article>
+          <article class="highlight-card">
+            <div class="highlight-img">
+              <img src="images/placeholder-culture3.jpg" alt="Guatemalan cuisine" class="lazy" loading="lazy">
+            </div>
+            <div class="highlight-info">
+              <h3>Local Cuisine</h3>
+              <p>Taste the flavors of Guatemala with traditional dishes and cooking demonstrations.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="testimonials" aria-label="Traveler testimonials">
+      <div class="container">
+        <h2>What Our Travelers Say</h2>
+        <div class="testimonials-slider" id="testimonialsSlider" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <h3>Maya Tours Guatemala</h3>
+          <p>Specializing in authentic cultural, natural, and adventure experiences throughout Guatemala.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="mayatours.html">Home</a></li>
+            <li><a href="packages.html">Tours</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>Email: info@mayatoursgt.com</p>
+          <p>Phone: +502 1234 5678</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>©2025 🌵 Ulises Antonio Tzaj 🌵 Guatemala</p>
+        <p>Last Updated: <span id="last-updated"></span></p>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="scripts/app.js"></script>
 </body>
-
 </html>
